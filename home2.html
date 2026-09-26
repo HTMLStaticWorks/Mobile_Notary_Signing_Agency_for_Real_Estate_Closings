@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>SignSure Mobile Notary – Real Estate Signing Solutions</title>
+  <meta name="description" content="Experience a new way to manage real estate closings. SignSure provides certified mobile notary signing agents for seamless property transactions.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="SignSure Home">
+        <span class="navbar__logo-icon"><i class="ri-quill-pen-line"></i></span>
+        SignSure
+      </a>
+      <div class="navbar__links">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="home2.html" class="navbar__link active">Home 2</a>
+        <a href="services.html" class="navbar__link">Services</a>
+        <a href="coverage.html" class="navbar__link">Coverage Area</a>
+        <a href="how-it-works.html" class="navbar__link">How It Works</a>
+        <a href="blog.html" class="navbar__link">Blog</a>
+        <a href="contact.html" class="navbar__link">Contact</a>
+        <a href="dashboard.html" class="navbar__link">Dashboard</a>
+      </div>
+      <div class="navbar__actions">
+        <button class="navbar__rtl-toggle" id="rtl-toggle" aria-label="Toggle text direction">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+        <button class="navbar__theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="ri-moon-line theme-icon"></i>
+        </button>
+        <a href="login.html" class="navbar__login-btn">Login</a>
+      </div>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <aside class="navbar__drawer" id="drawer" aria-label="Mobile menu">
+    <button class="drawer__close" id="drawer-close" aria-label="Close menu">
+      <i class="ri-close-line"></i>
+    </button>
+    <div class="drawer__links">
+      <a href="index.html" class="drawer__link"><i class="ri-home-4-line"></i> Home</a>
+      <a href="home2.html" class="drawer__link active"><i class="ri-home-heart-line"></i> Home 2</a>
+      <a href="services.html" class="drawer__link"><i class="ri-briefcase-line"></i> Services</a>
+      <a href="coverage.html" class="drawer__link"><i class="ri-map-pin-line"></i> Coverage Area</a>
+      <a href="how-it-works.html" class="drawer__link"><i class="ri-route-line"></i> How It Works</a>
+      <a href="blog.html" class="drawer__link"><i class="ri-article-line"></i> Blog</a>
+      <a href="contact.html" class="drawer__link"><i class="ri-mail-line"></i> Contact</a>
+      <a href="dashboard.html" class="drawer__link"><i class="ri-dashboard-line"></i> Dashboard</a>
+      <a href="login.html" class="drawer__link"><i class="ri-login-box-line"></i> Login</a>
+    </div>
+    <div class="drawer__actions">
+      <button class="drawer__rtl-toggle" id="drawer-rtl-toggle" aria-label="Toggle RTL">
+        <i class="ri-arrow-left-right-line"></i>
+      </button>
+      <button class="drawer__theme-toggle" id="drawer-theme-toggle" aria-label="Toggle theme">
+        <i class="ri-moon-line theme-icon"></i>
+      </button>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- ═══ HERO (Split Layout) ═══ -->
+    <section class="hero hero--alt" aria-label="Hero" style="padding-block: 0;">
+      <div class="hero__shapes">
+        <div class="hero__shape"></div>
+        <div class="hero__shape"></div>
+        <div class="hero__shape"></div>
+      </div>
+      <div class="container">
+        <div class="hero--split">
+          <div class="hero__content" style="opacity: 0; animation: slideInLeft 0.8s ease 0.3s both;">
+            <span class="hero__tag" style="animation: fadeSlideUp 0.6s ease 0.2s both;"><i class="ri-verified-badge-line"></i> Licensed &amp; Insured</span>
+            <h1 style="color: var(--text-primary); margin-block-end: var(--space-5); opacity: 0; animation: slideInLeft 0.8s ease 0.4s both;">Your Closing, <span style="color: var(--color-secondary-dark);">Simplified.</span></h1>
+            <p style="color: var(--text-secondary); font-size: var(--size-lead); margin-block-end: var(--space-7); max-width: 480px; opacity: 0; animation: slideInLeft 0.8s ease 0.6s both;">Mobile notary signing agents dispatched to any location — homes, offices, hospitals, or wherever your clients need us.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: var(--space-4); opacity: 0; animation: slideInLeft 0.8s ease 0.8s both;">
+              <a href="contact.html" class="btn btn--primary btn--lg">Schedule a Signing</a>
+              <a href="services.html" class="btn btn--secondary btn--lg">View Services</a>
+            </div>
+
+            <!-- Interactive counter -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); margin-block-start: var(--space-9); opacity: 0; animation: fadeSlideUp 0.8s ease 1s both;">
+              <div style="text-align: center; padding: var(--space-4); background: var(--surface-elevated); border-radius: var(--radius);">
+                <div style="font-family: var(--font-heading); font-weight: var(--weight-h2); font-size: var(--size-h3); color: var(--color-accent);" id="counter-closings">0</div>
+                <div style="font-size: var(--size-caption); color: var(--text-muted); margin-block-start: var(--space-1);">Closings This Month</div>
+              </div>
+              <div style="text-align: center; padding: var(--space-4); background: var(--surface-elevated); border-radius: var(--radius);">
+                <div style="font-family: var(--font-heading); font-weight: var(--weight-h2); font-size: var(--size-h3); color: var(--color-accent);" id="counter-agents">0</div>
+                <div style="font-size: var(--size-caption); color: var(--text-muted); margin-block-start: var(--space-1);">Active Agents</div>
+              </div>
+              <div style="text-align: center; padding: var(--space-4); background: var(--surface-elevated); border-radius: var(--radius);">
+                <div style="font-family: var(--font-heading); font-weight: var(--weight-h2); font-size: var(--size-h3); color: var(--color-accent);" id="counter-rating">0</div>
+                <div style="font-size: var(--size-caption); color: var(--text-muted); margin-block-start: var(--space-1);">Client Rating</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__visual" style="opacity: 0; animation: slideInRight 0.8s ease 0.5s both;">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Beautiful home for closing" loading="eager">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ HOW IT WORKS (Visual) ═══ -->
+    <section style="background: var(--surface-elevated);" aria-label="Process Overview">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag"><i class="ri-route-line"></i> Simple Process</span>
+          <h2>Close in Four Easy Steps</h2>
+          <p class="section-subtitle">From scheduling to document delivery, our streamlined process ensures nothing falls through the cracks.</p>
+        </div>
+        <div class="process-steps reveal">
+          <div class="process-step">
+            <div class="process-step__number">1</div>
+            <h3 class="process-step__title">Request</h3>
+            <p class="process-step__text">Submit your signing request through our dashboard or contact our scheduling team.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-step__number">2</div>
+            <h3 class="process-step__title">Assign</h3>
+            <p class="process-step__text">We match a vetted, certified signing agent near the borrower's location within minutes.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-step__number">3</div>
+            <h3 class="process-step__title">Sign</h3>
+            <p class="process-step__text">Our agent arrives on time, guides the signer through every document with care and accuracy.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-step__number">4</div>
+            <h3 class="process-step__title">Deliver</h3>
+            <p class="process-step__text">Completed docs are scanned, uploaded, and shipped back — often the same day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SERVICES (Different layout) ═══ -->
+    <section aria-label="Services Overview">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag"><i class="ri-briefcase-line"></i> Our Expertise</span>
+          <h2>Tailored to Title &amp; Settlement</h2>
+          <p class="section-subtitle">Every signing type, every document package — handled by trained professionals who know the industry.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6);" class="reveal">
+          <div style="display: flex; gap: var(--space-5); background: var(--surface-card); padding: var(--space-6); border-radius: var(--radius); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); transition: all 0.3s ease; align-items: flex-start;" onmouseenter="this.style.boxShadow='var(--shadow)';this.style.transform='translateY(-3px)'" onmouseleave="this.style.boxShadow='var(--shadow-sm)';this.style.transform='none'">
+            <div style="width: 56px; height: 56px; border-radius: var(--radius); background: rgba(200,164,94,0.1); color: var(--color-secondary-dark); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;"><i class="ri-home-line"></i></div>
+            <div>
+              <h3 style="font-family: var(--font-heading); font-weight: var(--weight-h3); font-size: var(--size-h5); margin-block-end: var(--space-2);">Purchase Closings</h3>
+              <p style="color: var(--text-secondary); font-size: var(--size-label); line-height: 1.6;">Seamless coordination for buyer and seller signings on residential and commercial purchases.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: var(--space-5); background: var(--surface-card); padding: var(--space-6); border-radius: var(--radius); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); transition: all 0.3s ease; align-items: flex-start;" onmouseenter="this.style.boxShadow='var(--shadow)';this.style.transform='translateY(-3px)'" onmouseleave="this.style.boxShadow='var(--shadow-sm)';this.style.transform='none'">
+            <div style="width: 56px; height: 56px; border-radius: var(--radius); background: rgba(45,139,122,0.1); color: var(--color-accent); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;"><i class="ri-refresh-line"></i></div>
+            <div>
+              <h3 style="font-family: var(--font-heading); font-weight: var(--weight-h3); font-size: var(--size-h5); margin-block-end: var(--space-2);">Refinance Closings</h3>
+              <p style="color: var(--text-secondary); font-size: var(--size-label); line-height: 1.6;">Accurate and efficient refinance signings at the borrower's preferred time and location.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: var(--space-5); background: var(--surface-card); padding: var(--space-6); border-radius: var(--radius); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); transition: all 0.3s ease; align-items: flex-start;" onmouseenter="this.style.boxShadow='var(--shadow)';this.style.transform='translateY(-3px)'" onmouseleave="this.style.boxShadow='var(--shadow-sm)';this.style.transform='none'">
+            <div style="width: 56px; height: 56px; border-radius: var(--radius); background: rgba(74,127,181,0.1); color: var(--color-info); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;"><i class="ri-file-text-line"></i></div>
+            <div>
+              <h3 style="font-family: var(--font-heading); font-weight: var(--weight-h3); font-size: var(--size-h5); margin-block-end: var(--space-2);">Loan Signings</h3>
+              <p style="color: var(--text-secondary); font-size: var(--size-label); line-height: 1.6;">HELOC, reverse mortgage, VA, FHA — our agents are trained in all major loan document packages.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: var(--space-5); background: var(--surface-card); padding: var(--space-6); border-radius: var(--radius); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); transition: all 0.3s ease; align-items: flex-start;" onmouseenter="this.style.boxShadow='var(--shadow)';this.style.transform='translateY(-3px)'" onmouseleave="this.style.boxShadow='var(--shadow-sm)';this.style.transform='none'">
+            <div style="width: 56px; height: 56px; border-radius: var(--radius); background: rgba(200,164,94,0.1); color: var(--color-secondary-dark); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;"><i class="ri-stamp-line"></i></div>
+            <div>
+              <h3 style="font-family: var(--font-heading); font-weight: var(--weight-h3); font-size: var(--size-h5); margin-block-end: var(--space-2);">General Notary</h3>
+              <p style="color: var(--text-secondary); font-size: var(--size-label); line-height: 1.6;">Affidavits, power of attorney, estate planning, and any standard notarization services.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ABOUT (Different layout) ═══ -->
+    <section style="background: var(--surface-elevated);" aria-label="About SignSure">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-9); align-items: center;" class="reveal">
+          <div>
+            <span class="section-tag"><i class="ri-shield-star-line"></i> Our Promise</span>
+            <h2 style="text-align: start; margin-block-end: var(--space-5);">Excellence at Every Closing Table</h2>
+            <p style="color: var(--text-secondary); font-size: var(--size-lead); margin-block-end: var(--space-5); line-height: 1.7;">With over 15 years in the industry, SignSure has built a reputation for reliability that title companies depend on for their most critical deadlines.</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-block-end: var(--space-6);">
+              <div style="padding: var(--space-4); background: var(--surface-card); border-radius: var(--radius); text-align: center; border: 1px solid var(--border-light);">
+                <div style="font-family: var(--font-heading); font-weight: var(--weight-h2); font-size: var(--size-h3); color: var(--color-secondary-dark);">99.7%</div>
+                <div style="font-size: var(--size-caption); color: var(--text-muted);">Completion Rate</div>
+              </div>
+              <div style="padding: var(--space-4); background: var(--surface-card); border-radius: var(--radius); text-align: center; border: 1px solid var(--border-light);">
+                <div style="font-family: var(--font-heading); font-weight: var(--weight-h2); font-size: var(--size-h3); color: var(--color-secondary-dark);">4.9★</div>
+                <div style="font-size: var(--size-caption); color: var(--text-muted);">Client Rating</div>
+              </div>
+            </div>
+            <a href="about.html" class="btn btn--primary">Learn About Us</a>
+          </div>
+          <div style="border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 3/4;">
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80" alt="Team collaboration" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TESTIMONIALS (Grid layout) ═══ -->
+    <section aria-label="Client Testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag"><i class="ri-heart-line"></i> Client Stories</span>
+          <h2>What Our Partners Say</h2>
+        </div>
+        <div class="grid grid--3 reveal">
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <p class="testimonial-card__text">SignSure transformed our closing operations. We now process 40% more signings with fewer delays and zero compliance issues.</p>
+            <div class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Diana Ross" class="testimonial-card__avatar" loading="lazy">
+              <div>
+                <div class="testimonial-card__name">Diana Ross</div>
+                <div class="testimonial-card__role">COO, Atlantic Title Agency</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <p class="testimonial-card__text">Their signing agents are the most professional in the industry. Every borrower interaction reflects well on our company.</p>
+            <div class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" alt="Marcus Williams" class="testimonial-card__avatar" loading="lazy">
+              <div>
+                <div class="testimonial-card__name">Marcus Williams</div>
+                <div class="testimonial-card__role">President, Keystone Escrow</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <p class="testimonial-card__text">The online dashboard is a game-changer. Real-time tracking, instant document access, and seamless invoice management.</p>
+            <div class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=100&q=80" alt="Nina Patel" class="testimonial-card__avatar" loading="lazy">
+              <div>
+                <div class="testimonial-card__name">Nina Patel</div>
+                <div class="testimonial-card__role">Director, First American Partners</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA ═══ -->
+    <section class="cta-section" aria-label="Call to action">
+      <div class="container reveal">
+        <h2 class="cta__title">Let's Close Together</h2>
+        <p class="cta__text">Partner with SignSure and experience the difference a dedicated notary signing service makes for your title company.</p>
+        <a href="contact.html" class="btn btn--primary btn--lg">Contact Us Today</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <span class="footer__logo-icon"><i class="ri-quill-pen-line"></i></span>
+            SignSure
+          </div>
+          <p class="footer__desc">Professional mobile notary signing services for real estate closings. Trusted by title companies, lenders, and settlement agents nationwide.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+            <a href="#" aria-label="Twitter"><i class="ri-twitter-x-fill"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Services</h4>
+          <div class="footer__links">
+            <a href="services.html">Purchase Closings</a>
+            <a href="services.html">Refinance Closings</a>
+            <a href="services.html">Loan Signings</a>
+            <a href="services.html">General Notary</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Company</h4>
+          <div class="footer__links">
+            <a href="about.html">About Us</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="coverage.html">Coverage Area</a>
+            <a href="blog.html">Blog</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Support</h4>
+          <div class="footer__links">
+            <a href="contact.html">Contact Us</a>
+            <a href="login.html">Client Login</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 SignSure Mobile Notary. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Interactive counter animation for Home 2
+    function animateCounter(elementId, target, suffix = '') {
+      const el = document.getElementById(elementId);
+      if (!el) return;
+      let current = 0;
+      const increment = target / 60;
+      const isFloat = !Number.isInteger(target);
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        el.textContent = isFloat ? current.toFixed(1) + suffix : Math.floor(current).toLocaleString() + suffix;
+      }, 25);
+    }
+
+    // Trigger counters when section is visible
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter('counter-closings', 1247);
+          animateCounter('counter-agents', 324);
+          animateCounter('counter-rating', 4.9, '/5');
+          counterObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    const counterSection = document.getElementById('counter-closings');
+    if (counterSection) {
+      counterObserver.observe(counterSection.closest('div').parentElement);
+    }
+  </script>
+</body>
+</html>

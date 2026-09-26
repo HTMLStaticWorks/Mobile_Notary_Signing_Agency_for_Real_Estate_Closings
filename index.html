@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>SignSure Mobile Notary – Trusted Real Estate Closings</title>
+  <meta name="description" content="SignSure Mobile Notary delivers fast, reliable, and convenient mobile notary signing services for real estate closings. Serving title companies with professional notary agents.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SignSure Mobile Notary",
+    "description": "Professional mobile notary signing services for real estate closings.",
+    "url": "https://signsure.com",
+    "telephone": "+1-800-555-SIGN",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Los Angeles",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "serviceType": ["Mobile Notary", "Real Estate Closing", "Loan Signing"]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar navbar--dark-bg" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="SignSure Home">
+        <span class="navbar__logo-icon"><i class="ri-quill-pen-line"></i></span>
+        SignSure
+      </a>
+
+      <div class="navbar__links">
+        <a href="index.html" class="navbar__link active">Home</a>
+        <a href="home2.html" class="navbar__link">Home 2</a>
+        <a href="services.html" class="navbar__link">Services</a>
+        <a href="coverage.html" class="navbar__link">Coverage Area</a>
+        <a href="how-it-works.html" class="navbar__link">How It Works</a>
+        <a href="blog.html" class="navbar__link">Blog</a>
+        <a href="contact.html" class="navbar__link">Contact</a>
+        <a href="dashboard.html" class="navbar__link">Dashboard</a>
+      </div>
+
+      <div class="navbar__actions">
+        <button class="navbar__rtl-toggle" id="rtl-toggle" aria-label="Toggle text direction">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+        <button class="navbar__theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="ri-moon-line theme-icon"></i>
+        </button>
+        <a href="login.html" class="navbar__login-btn">Login</a>
+      </div>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Drawer Overlay -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="navbar__drawer" id="drawer" aria-label="Mobile menu">
+    <button class="drawer__close" id="drawer-close" aria-label="Close menu">
+      <i class="ri-close-line"></i>
+    </button>
+    <div class="drawer__links">
+      <a href="index.html" class="drawer__link active"><i class="ri-home-4-line"></i> Home</a>
+      <a href="home2.html" class="drawer__link"><i class="ri-home-heart-line"></i> Home 2</a>
+      <a href="services.html" class="drawer__link"><i class="ri-briefcase-line"></i> Services</a>
+      <a href="coverage.html" class="drawer__link"><i class="ri-map-pin-line"></i> Coverage Area</a>
+      <a href="how-it-works.html" class="drawer__link"><i class="ri-route-line"></i> How It Works</a>
+      <a href="blog.html" class="drawer__link"><i class="ri-article-line"></i> Blog</a>
+      <a href="contact.html" class="drawer__link"><i class="ri-mail-line"></i> Contact</a>
+      <a href="dashboard.html" class="drawer__link"><i class="ri-dashboard-line"></i> Dashboard</a>
+      <a href="login.html" class="drawer__link"><i class="ri-login-box-line"></i> Login</a>
+    </div>
+    <div class="drawer__actions">
+      <button class="drawer__rtl-toggle" id="drawer-rtl-toggle" aria-label="Toggle RTL">
+        <i class="ri-arrow-left-right-line"></i>
+      </button>
+      <button class="drawer__theme-toggle" id="drawer-theme-toggle" aria-label="Toggle theme">
+        <i class="ri-moon-line theme-icon"></i>
+      </button>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero__bg">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80" alt="Real estate closing" loading="eager">
+      </div>
+      <div class="hero__shapes">
+        <div class="hero__shape"></div>
+        <div class="hero__shape"></div>
+        <div class="hero__shape"></div>
+      </div>
+      <div class="container">
+        <div class="hero__content">
+          <span class="hero__tag"><i class="ri-shield-check-line"></i> Trusted Notary Services</span>
+          <h1 class="hero__title">Fast, Reliable &amp; <span class="highlight">Convenient</span> Real Estate Closings</h1>
+          <p class="hero__text">Professional mobile notary signing agents at your door — ensuring seamless closings for title companies, lenders, and real estate professionals nationwide.</p>
+          <div class="hero__actions">
+            <a href="services.html" class="btn btn--primary btn--lg">Explore Services</a>
+            <a href="how-it-works.html" class="btn btn--secondary btn--lg" style="border-color: rgba(255,255,255,0.3); color: #fff;">How It Works</a>
+          </div>
+          <div class="hero__stats">
+            <div>
+              <div class="hero__stat-value">15K+</div>
+              <div class="hero__stat-label">Closings Completed</div>
+            </div>
+            <div>
+              <div class="hero__stat-value">98%</div>
+              <div class="hero__stat-label">On-Time Rate</div>
+            </div>
+            <div>
+              <div class="hero__stat-value">500+</div>
+              <div class="hero__stat-label">Title Partners</div>
+            </div>
+            <div>
+              <div class="hero__stat-value">48</div>
+              <div class="hero__stat-label">States Covered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SERVICES ═══ -->
+    <section class="services-section" aria-label="Our Services">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag"><i class="ri-briefcase-line"></i> What We Do</span>
+          <h2>Comprehensive Signing Services</h2>
+          <p class="section-subtitle">From purchase closings to refinance signings, we cover every notary need for your real estate transactions.</p>
+        </div>
+        <div class="grid grid--4 reveal">
+          <div class="service-card">
+            <div class="service-card__icon"><i class="ri-home-line"></i></div>
+            <h3 class="service-card__title">Purchase Closings</h3>
+            <p class="service-card__text">Complete signing coordination for residential and commercial property purchases, ensuring accurate document execution.</p>
+            <a href="services.html" class="service-card__link">Learn More <i class="ri-arrow-right-s-line"></i></a>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon"><i class="ri-refresh-line"></i></div>
+            <h3 class="service-card__title">Refinance Closings</h3>
+            <p class="service-card__text">Streamlined refinance signings with attention to detail and compliance — completed at the borrower's convenience.</p>
+            <a href="services.html" class="service-card__link">Learn More <i class="ri-arrow-right-s-line"></i></a>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon"><i class="ri-file-text-line"></i></div>
+            <h3 class="service-card__title">Loan Signings</h3>
+            <p class="service-card__text">Professional loan signing agents trained in all loan document packages — HELOC, reverse mortgage, and more.</p>
+            <a href="services.html" class="service-card__link">Learn More <i class="ri-arrow-right-s-line"></i></a>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon"><i class="ri-stamp-line"></i></div>
+            <h3 class="service-card__title">General Notary</h3>
+            <p class="service-card__text">Beyond real estate — we handle affidavits, powers of attorney, estate documents, and all notarization needs.</p>
+            <a href="services.html" class="service-card__link">Learn More <i class="ri-arrow-right-s-line"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ABOUT ═══ -->
+    <section class="about-section" aria-label="About SignSure">
+      <div class="container">
+        <div class="about-grid reveal">
+          <div class="about__image">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80" alt="Professional notary signing documents" loading="lazy">
+            <div class="about__image-badge">15+ <span>Years of Experience</span></div>
+          </div>
+          <div class="about__content">
+            <span class="section-tag"><i class="ri-information-line"></i> About Us</span>
+            <h2>Your Trusted Partner in Real Estate Closings</h2>
+            <p class="lead">SignSure Mobile Notary was founded with a single mission — to make real estate closings effortless, reliable, and accessible for title companies and their clients.</p>
+            <p>With a nationwide network of certified notary signing agents, we deliver punctual, professional, and error-free signings that keep your closings on track.</p>
+            <ul class="about__list">
+              <li><i class="ri-check-line"></i> Background-checked &amp; certified notary agents</li>
+              <li><i class="ri-check-line"></i> E&amp;O insured for your protection</li>
+              <li><i class="ri-check-line"></i> Same-day scheduling available</li>
+              <li><i class="ri-check-line"></i> Real-time tracking &amp; status updates</li>
+            </ul>
+            <a href="about.html" class="btn btn--primary">Read Our Story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FEATURES / HIGHLIGHTS ═══ -->
+    <section class="features-section" aria-label="Why Choose Us">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag"><i class="ri-star-line"></i> Why SignSure</span>
+          <h2>Built for Deadline-Driven Closings</h2>
+          <p class="section-subtitle">Every feature of our service is designed to meet the exacting standards of title companies and settlement agents.</p>
+        </div>
+        <div class="grid grid--4 reveal">
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="ri-time-line"></i></div>
+            <h3 class="feature-card__title">Rapid Assignment</h3>
+            <p class="feature-card__text">Signing agents assigned within 30 minutes of your request, guaranteed.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="ri-shield-check-line"></i></div>
+            <h3 class="feature-card__title">Compliance First</h3>
+            <p class="feature-card__text">Every signing follows state-specific notary laws and lender compliance guidelines.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="ri-upload-cloud-2-line"></i></div>
+            <h3 class="feature-card__title">Digital Delivery</h3>
+            <p class="feature-card__text">Completed documents scanned and uploaded within 2 hours of the signing.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="ri-customer-service-2-line"></i></div>
+            <h3 class="feature-card__title">24/7 Support</h3>
+            <p class="feature-card__text">Dedicated scheduling coordinators available around the clock for your closings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TESTIMONIALS ═══ -->
+    <section class="testimonials-section" aria-label="Testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag"><i class="ri-chat-quote-line"></i> Client Voices</span>
+          <h2>Trusted by Title Companies Nationwide</h2>
+          <p class="section-subtitle">See what our partners say about working with SignSure Mobile Notary.</p>
+        </div>
+        <div class="testimonial-carousel reveal">
+          <div class="testimonial-track">
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-card__quote">"</div>
+                <p class="testimonial-card__text">SignSure has been instrumental in keeping our closings on schedule. Their agents are professional, punctual, and thorough with every document package.</p>
+                <div class="testimonial-card__author">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Sarah Mitchell" class="testimonial-card__avatar" loading="lazy">
+                  <div>
+                    <div class="testimonial-card__name">Sarah Mitchell</div>
+                    <div class="testimonial-card__role">VP Operations, Summit Title Group</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-card__quote">"</div>
+                <p class="testimonial-card__text">We switched to SignSure last year and our closing error rate dropped by 40%. Their signing agents understand real estate documents inside and out.</p>
+                <div class="testimonial-card__author">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="James Rodriguez" class="testimonial-card__avatar" loading="lazy">
+                  <div>
+                    <div class="testimonial-card__name">James Rodriguez</div>
+                    <div class="testimonial-card__role">Director, Pacific Coast Escrow</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-card__quote">"</div>
+                <p class="testimonial-card__text">The dashboard makes tracking our signings effortless. We can see real-time status updates and access completed documents within hours.</p>
+                <div class="testimonial-card__author">
+                  <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&q=80" alt="Amanda Chen" class="testimonial-card__avatar" loading="lazy">
+                  <div>
+                    <div class="testimonial-card__name">Amanda Chen</div>
+                    <div class="testimonial-card__role">Manager, National Title Solutions</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-card__quote">"</div>
+                <p class="testimonial-card__text">Best notary signing service we've worked with in 20 years. Reliable, responsive, and their same-day availability has saved multiple deals for us.</p>
+                <div class="testimonial-card__author">
+                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Robert Thompson" class="testimonial-card__avatar" loading="lazy">
+                  <div>
+                    <div class="testimonial-card__name">Robert Thompson</div>
+                    <div class="testimonial-card__role">Owner, Heritage Settlement Co.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-card__quote">"</div>
+                <p class="testimonial-card__text">SignSure's coverage area is unmatched. We operate across 12 states and they consistently deliver quality signings no matter the location.</p>
+                <div class="testimonial-card__author">
+                  <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80" alt="Lisa Park" class="testimonial-card__avatar" loading="lazy">
+                  <div>
+                    <div class="testimonial-card__name">Lisa Park</div>
+                    <div class="testimonial-card__role">CEO, CorePoint Title Insurance</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="carousel-prev" aria-label="Previous testimonial">
+              <i class="ri-arrow-left-s-line"></i>
+            </button>
+            <button class="carousel-btn" id="carousel-next" aria-label="Next testimonial">
+              <i class="ri-arrow-right-s-line"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA ═══ -->
+    <section class="cta-section" aria-label="Call to action">
+      <div class="container reveal">
+        <h2 class="cta__title">Ready to Streamline Your Closings?</h2>
+        <p class="cta__text">Join 500+ title companies that trust SignSure for their notary signing needs. Schedule your first appointment today.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="contact.html" class="btn btn--primary btn--lg">Get Started</a>
+          <a href="coverage.html" class="btn btn--secondary btn--lg" style="border-color: rgba(255,255,255,0.3); color: #fff;">View Coverage</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <span class="footer__logo-icon"><i class="ri-quill-pen-line"></i></span>
+            SignSure
+          </div>
+          <p class="footer__desc">Professional mobile notary signing services for real estate closings. Trusted by title companies, lenders, and settlement agents nationwide.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+            <a href="#" aria-label="Twitter"><i class="ri-twitter-x-fill"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Services</h4>
+          <div class="footer__links">
+            <a href="services.html">Purchase Closings</a>
+            <a href="services.html">Refinance Closings</a>
+            <a href="services.html">Loan Signings</a>
+            <a href="services.html">General Notary</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Company</h4>
+          <div class="footer__links">
+            <a href="about.html">About Us</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="coverage.html">Coverage Area</a>
+            <a href="blog.html">Blog</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Support</h4>
+          <div class="footer__links">
+            <a href="contact.html">Contact Us</a>
+            <a href="login.html">Client Login</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 SignSure Mobile Notary. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

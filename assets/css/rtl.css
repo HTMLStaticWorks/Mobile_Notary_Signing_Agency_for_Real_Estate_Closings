@@ -1,0 +1,88 @@
+/* ═══════════════════════════════════════════════════════
+   SignSure Mobile Notary — RTL Overrides
+   Applied when dir="rtl" is set on <html>
+   ═══════════════════════════════════════════════════════ */
+
+[dir="rtl"] {
+  direction: rtl;
+}
+
+/* Drawer flips */
+[dir="rtl"] .navbar__drawer {
+  inset-inline-end: auto;
+  inset-inline-start: 0;
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] .navbar__drawer.active {
+  transform: translateX(0);
+}
+
+/* Timeline */
+[dir="rtl"] .timeline {
+  padding-inline-start: 0;
+  padding-inline-end: var(--space-8);
+}
+
+[dir="rtl"] .timeline::before {
+  inset-inline-start: auto;
+  inset-inline-end: 15px;
+}
+
+[dir="rtl"] .timeline__dot {
+  inset-inline-start: auto;
+  inset-inline-end: calc(-1 * var(--space-8) + 8px);
+}
+
+/* Blog single blockquote */
+[dir="rtl"] .blog-single__content blockquote {
+  border-inline-start: none;
+  border-inline-end: 3px solid var(--color-secondary);
+  padding-inline-start: 0;
+  padding-inline-end: var(--space-5);
+}
+
+/* Service detail alternate flip */
+[dir="rtl"] .service-detail:nth-child(even) {
+  direction: rtl;
+}
+
+/* Dashboard sidebar */
+[dir="rtl"] .dashboard__sidebar {
+  inset-inline-start: 0;
+  inset-inline-end: auto;
+  border-inline-end: 1px solid var(--border-light);
+  border-inline-start: none;
+}
+
+/* Table header alignment */
+[dir="rtl"] .dashboard__table th,
+[dir="rtl"] .dashboard__table td {
+  text-align: start;
+}
+
+/* Carousel button icons */
+[dir="rtl"] .carousel-btn i {
+  transform: scaleX(-1);
+}
+
+/* Icon arrows in cards */
+[dir="rtl"] .service-card__link i {
+  transform: scaleX(-1);
+}
+
+/* Form error messages */
+[dir="rtl"] .form__error {
+  text-align: start;
+}
+
+/* Pricing card features */
+[dir="rtl"] .pricing-card__features {
+  text-align: start;
+}
+
+/* Process steps connector */
+[dir="rtl"] .process-steps::before {
+  inset-inline-start: 12%;
+  inset-inline-end: 12%;
+}

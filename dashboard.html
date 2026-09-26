@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>Dashboard – SignSure Client Portal</title>
+  <meta name="description" content="SignSure title company client dashboard. Schedule signings, track closings, access documents, and manage invoices.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Sidebar Toggle (Mobile) -->
+  <button class="dashboard__sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+    <i class="ri-menu-line"></i>
+  </button>
+
+  <div class="dashboard">
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="dashboard__sidebar" aria-label="Dashboard navigation">
+      <a href="index.html" class="dashboard__sidebar-logo">
+        <span class="dashboard__sidebar-logo-icon"><i class="ri-quill-pen-line"></i></span>
+        SignSure
+      </a>
+
+      <div class="dashboard__toggles">
+        <button class="dashboard__toggle-btn" id="dashboard-theme-toggle" aria-label="Toggle theme">
+          <i class="ri-moon-line dash-theme-icon"></i>
+        </button>
+        <button class="dashboard__toggle-btn" id="dashboard-rtl-toggle" aria-label="Toggle RTL">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+      </div>
+
+      <nav class="dashboard__nav">
+        <span class="dashboard__nav-section">Main</span>
+        <a href="#" class="dashboard__nav-link active" data-panel="panel-overview">
+          <i class="ri-dashboard-line"></i> Overview
+        </a>
+        <a href="#" class="dashboard__nav-link" data-panel="panel-appointments">
+          <i class="ri-calendar-check-line"></i> Appointments
+        </a>
+        <a href="#" class="dashboard__nav-link" data-panel="panel-documents">
+          <i class="ri-file-copy-2-line"></i> Documents
+        </a>
+        <a href="#" class="dashboard__nav-link" data-panel="panel-invoices">
+          <i class="ri-money-dollar-circle-line"></i> Invoices
+        </a>
+
+        <div class="dashboard__nav-divider"></div>
+        <span class="dashboard__nav-section">Management</span>
+        <a href="#" class="dashboard__nav-link" data-panel="panel-users">
+          <i class="ri-user-line"></i> Users
+        </a>
+        <a href="#" class="dashboard__nav-link" data-panel="panel-messages">
+          <i class="ri-mail-line"></i> Messages
+        </a>
+        <a href="#" class="dashboard__nav-link" data-panel="panel-reports">
+          <i class="ri-bar-chart-line"></i> Reports
+        </a>
+        <a href="#" class="dashboard__nav-link" data-panel="panel-settings">
+          <i class="ri-settings-3-line"></i> Settings
+        </a>
+
+        <div class="dashboard__nav-divider"></div>
+        <a href="index.html" class="dashboard__nav-link">
+          <i class="ri-home-4-line"></i> Back to Site
+        </a>
+        <a href="login.html" class="dashboard__nav-link">
+          <i class="ri-logout-box-line"></i> Logout
+        </a>
+      </nav>
+
+      <div class="dashboard__sidebar-footer">
+        <div class="dashboard__user">
+          <div class="dashboard__user-avatar">JD</div>
+          <div>
+            <div class="dashboard__user-name">John Doe</div>
+            <div class="dashboard__user-role">Summit Title Group</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ═══ MAIN CONTENT ═══ -->
+    <main class="dashboard__main">
+      <div class="dashboard__header">
+        <h1>Overview</h1>
+        <div class="dashboard__header-actions">
+          <div class="dashboard__search">
+            <i class="ri-search-line"></i>
+            <input type="text" placeholder="Search signings..." aria-label="Search">
+          </div>
+          <button class="dashboard__notification-btn" aria-label="Notifications">
+            <i class="ri-notification-3-line"></i>
+            <span class="dashboard__notification-badge"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ═══ OVERVIEW PANEL ═══ -->
+      <div class="dashboard__content-panel" id="panel-overview">
+        <!-- KPI Cards -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-card__header">
+              <div class="kpi-card__icon"><i class="ri-calendar-check-line"></i></div>
+              <span class="kpi-card__trend kpi-card__trend--up"><i class="ri-arrow-up-s-line"></i> 12%</span>
+            </div>
+            <div class="kpi-card__value">247</div>
+            <div class="kpi-card__label">Signings This Month</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card__header">
+              <div class="kpi-card__icon"><i class="ri-check-double-line"></i></div>
+              <span class="kpi-card__trend kpi-card__trend--up"><i class="ri-arrow-up-s-line"></i> 3%</span>
+            </div>
+            <div class="kpi-card__value">98.2%</div>
+            <div class="kpi-card__label">Completion Rate</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card__header">
+              <div class="kpi-card__icon"><i class="ri-time-line"></i></div>
+              <span class="kpi-card__trend kpi-card__trend--down"><i class="ri-arrow-down-s-line"></i> 8%</span>
+            </div>
+            <div class="kpi-card__value">1.4 hrs</div>
+            <div class="kpi-card__label">Avg. Turnaround</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card__header">
+              <div class="kpi-card__icon"><i class="ri-money-dollar-circle-line"></i></div>
+              <span class="kpi-card__trend kpi-card__trend--up"><i class="ri-arrow-up-s-line"></i> 15%</span>
+            </div>
+            <div class="kpi-card__value">$37,050</div>
+            <div class="kpi-card__label">Revenue This Month</div>
+          </div>
+        </div>
+
+        <!-- Recent Appointments Table -->
+        <div class="dashboard__panel">
+          <div class="dashboard__panel-header">
+            <h3 class="dashboard__panel-title">Recent Appointments</h3>
+            <a href="#" class="btn btn--ghost btn--sm">View All</a>
+          </div>
+          <div style="overflow-x: auto;">
+            <table class="dashboard__table">
+              <thead>
+                <tr>
+                  <th>Order #</th>
+                  <th>Borrower</th>
+                  <th>Type</th>
+                  <th>Date</th>
+                  <th>Agent</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SS-2026-4821</td>
+                  <td>Robert & Linda Harrison</td>
+                  <td>Purchase</td>
+                  <td>Sep 26, 2026</td>
+                  <td>Maria Santos</td>
+                  <td><span class="status-badge status-badge--scheduled"><span class="status-badge__dot"></span> Scheduled</span></td>
+                </tr>
+                <tr>
+                  <td>SS-2026-4820</td>
+                  <td>Jason Kim</td>
+                  <td>Refinance</td>
+                  <td>Sep 25, 2026</td>
+                  <td>David Chen</td>
+                  <td><span class="status-badge status-badge--completed"><span class="status-badge__dot"></span> Completed</span></td>
+                </tr>
+                <tr>
+                  <td>SS-2026-4819</td>
+                  <td>Sarah & Mike Johnson</td>
+                  <td>Purchase</td>
+                  <td>Sep 25, 2026</td>
+                  <td>Amanda Lee</td>
+                  <td><span class="status-badge status-badge--completed"><span class="status-badge__dot"></span> Completed</span></td>
+                </tr>
+                <tr>
+                  <td>SS-2026-4818</td>
+                  <td>Patricia Torres</td>
+                  <td>HELOC</td>
+                  <td>Sep 24, 2026</td>
+                  <td>James Williams</td>
+                  <td><span class="status-badge status-badge--pending"><span class="status-badge__dot"></span> Pending Docs</span></td>
+                </tr>
+                <tr>
+                  <td>SS-2026-4817</td>
+                  <td>Michael Nguyen</td>
+                  <td>Refinance</td>
+                  <td>Sep 24, 2026</td>
+                  <td>Lisa Park</td>
+                  <td><span class="status-badge status-badge--completed"><span class="status-badge__dot"></span> Completed</span></td>
+                </tr>
+                <tr>
+                  <td>SS-2026-4816</td>
+                  <td>Emily & David Brown</td>
+                  <td>Purchase</td>
+                  <td>Sep 23, 2026</td>
+                  <td>Maria Santos</td>
+                  <td><span class="status-badge status-badge--cancelled"><span class="status-badge__dot"></span> Cancelled</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Two-column panels -->
+        <div class="dashboard__grid">
+          <!-- Upcoming Closings -->
+          <div class="dashboard__panel">
+            <div class="dashboard__panel-header">
+              <h3 class="dashboard__panel-title">Upcoming Closings</h3>
+              <a href="#" class="btn btn--ghost btn--sm">Schedule New</a>
+            </div>
+            <div class="dashboard__panel-body">
+              <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--space-3); background: var(--surface-elevated); border-radius: var(--radius);">
+                  <div>
+                    <div style="font-weight: var(--weight-btn); font-size: var(--size-label);">Harrison Purchase Closing</div>
+                    <div style="font-size: var(--size-caption); color: var(--text-muted);">Today, 2:00 PM • 123 Oak Street, LA</div>
+                  </div>
+                  <span class="status-badge status-badge--scheduled"><span class="status-badge__dot"></span> Today</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--space-3); background: var(--surface-elevated); border-radius: var(--radius);">
+                  <div>
+                    <div style="font-weight: var(--weight-btn); font-size: var(--size-label);">Martinez Refinance</div>
+                    <div style="font-size: var(--size-caption); color: var(--text-muted);">Tomorrow, 10:00 AM • 456 Pine Ave, SF</div>
+                  </div>
+                  <span class="status-badge status-badge--pending"><span class="status-badge__dot"></span> Tomorrow</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--space-3); background: var(--surface-elevated); border-radius: var(--radius);">
+                  <div>
+                    <div style="font-weight: var(--weight-btn); font-size: var(--size-label);">Wilson HELOC Signing</div>
+                    <div style="font-size: var(--size-caption); color: var(--text-muted);">Sep 28, 3:30 PM • 789 Elm Dr, Seattle</div>
+                  </div>
+                  <span class="status-badge status-badge--scheduled"><span class="status-badge__dot"></span> Sep 28</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Messages -->
+          <div class="dashboard__panel">
+            <div class="dashboard__panel-header">
+              <h3 class="dashboard__panel-title">Messages</h3>
+              <a href="#" class="btn btn--ghost btn--sm">View All</a>
+            </div>
+            <div>
+              <div class="message-item">
+                <div class="message-item__avatar"><i class="ri-user-line"></i></div>
+                <div class="message-item__content">
+                  <div class="message-item__name">Maria Santos</div>
+                  <div class="message-item__text">Harrison signing confirmed for 2:00 PM today. Documents received and reviewed.</div>
+                </div>
+                <span class="message-item__time">10 min</span>
+              </div>
+              <div class="message-item">
+                <div class="message-item__avatar"><i class="ri-user-line"></i></div>
+                <div class="message-item__content">
+                  <div class="message-item__name">Support Team</div>
+                  <div class="message-item__text">Your invoice #INV-4820 has been generated and is ready for review.</div>
+                </div>
+                <span class="message-item__time">1 hr</span>
+              </div>
+              <div class="message-item">
+                <div class="message-item__avatar"><i class="ri-user-line"></i></div>
+                <div class="message-item__content">
+                  <div class="message-item__name">David Chen</div>
+                  <div class="message-item__text">Kim refinance completed. Scan-back uploaded. Original docs shipping via FedEx.</div>
+                </div>
+                <span class="message-item__time">3 hrs</span>
+              </div>
+              <div class="message-item">
+                <div class="message-item__avatar"><i class="ri-user-line"></i></div>
+                <div class="message-item__content">
+                  <div class="message-item__name">Amanda Lee</div>
+                  <div class="message-item__text">Johnson purchase signing completed. All documents executed correctly.</div>
+                </div>
+                <span class="message-item__time">5 hrs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ APPOINTMENTS PANEL ═══ -->
+      <div class="dashboard__content-panel" id="panel-appointments" style="display:none;">
+        <div class="dashboard__panel">
+          <div class="dashboard__panel-header">
+            <h3 class="dashboard__panel-title">Signing Appointments</h3>
+            <button class="btn btn--primary btn--sm"><i class="ri-add-line"></i> New Appointment</button>
+          </div>
+          <div style="overflow-x: auto;">
+            <table class="dashboard__table">
+              <thead>
+                <tr>
+                  <th>Order #</th>
+                  <th>Borrower</th>
+                  <th>Type</th>
+                  <th>Location</th>
+                  <th>Date / Time</th>
+                  <th>Agent</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SS-2026-4821</td>
+                  <td>Robert & Linda Harrison</td>
+                  <td>Purchase</td>
+                  <td>123 Oak St, Los Angeles</td>
+                  <td>Sep 26, 2:00 PM</td>
+                  <td>Maria Santos</td>
+                  <td><span class="status-badge status-badge--scheduled"><span class="status-badge__dot"></span> Scheduled</span></td>
+                </tr>
+                <tr>
+                  <td>SS-2026-4822</td>
+                  <td>Carlos Martinez</td>
+                  <td>Refinance</td>
+                  <td>456 Pine Ave, San Francisco</td>
+                  <td>Sep 27, 10:00 AM</td>
+                  <td>Pending</td>
+                  <td><span class="status-badge status-badge--pending"><span class="status-badge__dot"></span> Pending</span></td>
+                </tr>
+                <tr>
+                  <td>SS-2026-4823</td>
+                  <td>Margaret Wilson</td>
+                  <td>HELOC</td>
+                  <td>789 Elm Dr, Seattle</td>
+                  <td>Sep 28, 3:30 PM</td>
+                  <td>Lisa Park</td>
+                  <td><span class="status-badge status-badge--scheduled"><span class="status-badge__dot"></span> Scheduled</span></td>
+                </tr>
+                <tr>
+                  <td>SS-2026-4820</td>
+                  <td>Jason Kim</td>
+                  <td>Refinance</td>
+                  <td>321 Maple Ct, Portland</td>
+                  <td>Sep 25, 11:00 AM</td>
+                  <td>David Chen</td>
+                  <td><span class="status-badge status-badge--completed"><span class="status-badge__dot"></span> Completed</span></td>
+                </tr>
+                <tr>
+                  <td>SS-2026-4819</td>
+                  <td>Sarah & Mike Johnson</td>
+                  <td>Purchase</td>
+                  <td>567 Cedar Ln, Denver</td>
+                  <td>Sep 25, 4:00 PM</td>
+                  <td>Amanda Lee</td>
+                  <td><span class="status-badge status-badge--completed"><span class="status-badge__dot"></span> Completed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ DOCUMENTS PANEL ═══ -->
+      <div class="dashboard__content-panel" id="panel-documents" style="display:none;">
+        <div class="dashboard__panel">
+          <div class="dashboard__panel-header">
+            <h3 class="dashboard__panel-title">Completed Documents</h3>
+            <div class="dashboard__search" style="min-width: 200px;">
+              <i class="ri-search-line"></i>
+              <input type="text" placeholder="Search documents..." aria-label="Search documents">
+            </div>
+          </div>
+          <div style="overflow-x: auto;">
+            <table class="dashboard__table">
+              <thead>
+                <tr>
+                  <th>Document</th>
+                  <th>Order #</th>
+                  <th>Borrower</th>
+                  <th>Uploaded</th>
+                  <th>Size</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><i class="ri-file-pdf-2-line" style="color: var(--color-error); margin-inline-end: var(--space-2);"></i> Kim_Refinance_Complete.pdf</td>
+                  <td>SS-2026-4820</td>
+                  <td>Jason Kim</td>
+                  <td>Sep 25, 1:15 PM</td>
+                  <td>4.2 MB</td>
+                  <td><a href="#" class="btn btn--ghost btn--sm"><i class="ri-download-2-line"></i> Download</a></td>
+                </tr>
+                <tr>
+                  <td><i class="ri-file-pdf-2-line" style="color: var(--color-error); margin-inline-end: var(--space-2);"></i> Johnson_Purchase_Complete.pdf</td>
+                  <td>SS-2026-4819</td>
+                  <td>Sarah & Mike Johnson</td>
+                  <td>Sep 25, 5:30 PM</td>
+                  <td>6.8 MB</td>
+                  <td><a href="#" class="btn btn--ghost btn--sm"><i class="ri-download-2-line"></i> Download</a></td>
+                </tr>
+                <tr>
+                  <td><i class="ri-file-pdf-2-line" style="color: var(--color-error); margin-inline-end: var(--space-2);"></i> Nguyen_Refinance_Complete.pdf</td>
+                  <td>SS-2026-4817</td>
+                  <td>Michael Nguyen</td>
+                  <td>Sep 24, 3:00 PM</td>
+                  <td>3.9 MB</td>
+                  <td><a href="#" class="btn btn--ghost btn--sm"><i class="ri-download-2-line"></i> Download</a></td>
+                </tr>
+                <tr>
+                  <td><i class="ri-file-pdf-2-line" style="color: var(--color-error); margin-inline-end: var(--space-2);"></i> Garcia_Purchase_Complete.pdf</td>
+                  <td>SS-2026-4815</td>
+                  <td>Ana Garcia</td>
+                  <td>Sep 23, 2:45 PM</td>
+                  <td>5.1 MB</td>
+                  <td><a href="#" class="btn btn--ghost btn--sm"><i class="ri-download-2-line"></i> Download</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ INVOICES PANEL ═══ -->
+      <div class="dashboard__content-panel" id="panel-invoices" style="display:none;">
+        <div class="dashboard__panel">
+          <div class="dashboard__panel-header">
+            <h3 class="dashboard__panel-title">Invoice History</h3>
+            <button class="btn btn--ghost btn--sm"><i class="ri-download-2-line"></i> Export CSV</button>
+          </div>
+          <div style="overflow-x: auto;">
+            <table class="dashboard__table">
+              <thead>
+                <tr>
+                  <th>Invoice #</th>
+                  <th>Order #</th>
+                  <th>Service</th>
+                  <th>Amount</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>INV-2026-0821</td>
+                  <td>SS-2026-4821</td>
+                  <td>Purchase Closing</td>
+                  <td>$150.00</td>
+                  <td>Sep 26, 2026</td>
+                  <td><span class="status-badge status-badge--pending"><span class="status-badge__dot"></span> Pending</span></td>
+                </tr>
+                <tr>
+                  <td>INV-2026-0820</td>
+                  <td>SS-2026-4820</td>
+                  <td>Refinance Signing</td>
+                  <td>$150.00</td>
+                  <td>Sep 25, 2026</td>
+                  <td><span class="status-badge status-badge--completed"><span class="status-badge__dot"></span> Paid</span></td>
+                </tr>
+                <tr>
+                  <td>INV-2026-0819</td>
+                  <td>SS-2026-4819</td>
+                  <td>Purchase Closing</td>
+                  <td>$150.00</td>
+                  <td>Sep 25, 2026</td>
+                  <td><span class="status-badge status-badge--completed"><span class="status-badge__dot"></span> Paid</span></td>
+                </tr>
+                <tr>
+                  <td>INV-2026-0817</td>
+                  <td>SS-2026-4817</td>
+                  <td>Refinance Signing</td>
+                  <td>$150.00</td>
+                  <td>Sep 24, 2026</td>
+                  <td><span class="status-badge status-badge--completed"><span class="status-badge__dot"></span> Paid</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ USERS PANEL ═══ -->
+      <div class="dashboard__content-panel" id="panel-users" style="display:none;">
+        <div class="dashboard__panel">
+          <div class="dashboard__panel-header">
+            <h3 class="dashboard__panel-title">User Management</h3>
+            <button class="btn btn--primary btn--sm"><i class="ri-user-add-line"></i> Add User</button>
+          </div>
+          <div style="overflow-x: auto;">
+            <table class="dashboard__table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Last Active</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John Doe</td>
+                  <td>john@summittitle.com</td>
+                  <td>Admin</td>
+                  <td>Now</td>
+                  <td><span class="status-badge status-badge--completed"><span class="status-badge__dot"></span> Active</span></td>
+                </tr>
+                <tr>
+                  <td>Jane Smith</td>
+                  <td>jane@summittitle.com</td>
+                  <td>Closer</td>
+                  <td>2 hrs ago</td>
+                  <td><span class="status-badge status-badge--completed"><span class="status-badge__dot"></span> Active</span></td>
+                </tr>
+                <tr>
+                  <td>Mike Johnson</td>
+                  <td>mike@summittitle.com</td>
+                  <td>Closer</td>
+                  <td>1 day ago</td>
+                  <td><span class="status-badge status-badge--pending"><span class="status-badge__dot"></span> Away</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ MESSAGES PANEL ═══ -->
+      <div class="dashboard__content-panel" id="panel-messages" style="display:none;">
+        <div class="dashboard__panel">
+          <div class="dashboard__panel-header">
+            <h3 class="dashboard__panel-title">Messages & Notifications</h3>
+          </div>
+          <div>
+            <div class="message-item">
+              <div class="message-item__avatar"><i class="ri-user-line"></i></div>
+              <div class="message-item__content">
+                <div class="message-item__name">Maria Santos — Signing Agent</div>
+                <div class="message-item__text">Harrison signing confirmed for 2:00 PM today. All documents have been received and reviewed. I'll arrive 10 minutes early.</div>
+              </div>
+              <span class="message-item__time">10 min ago</span>
+            </div>
+            <div class="message-item">
+              <div class="message-item__avatar" style="background: rgba(200,164,94,0.1); color: var(--color-secondary-dark);"><i class="ri-notification-3-line"></i></div>
+              <div class="message-item__content">
+                <div class="message-item__name">System Notification</div>
+                <div class="message-item__text">Invoice #INV-2026-0820 has been generated for the Kim refinance signing (SS-2026-4820). Amount: $150.00.</div>
+              </div>
+              <span class="message-item__time">1 hr ago</span>
+            </div>
+            <div class="message-item">
+              <div class="message-item__avatar"><i class="ri-user-line"></i></div>
+              <div class="message-item__content">
+                <div class="message-item__name">David Chen — Signing Agent</div>
+                <div class="message-item__text">Kim refinance signing completed successfully. All 47 pages executed. Scan-back uploading now. FedEx tracking: 1234567890.</div>
+              </div>
+              <span class="message-item__time">3 hrs ago</span>
+            </div>
+            <div class="message-item">
+              <div class="message-item__avatar"><i class="ri-user-line"></i></div>
+              <div class="message-item__content">
+                <div class="message-item__name">Amanda Lee — Signing Agent</div>
+                <div class="message-item__text">Johnson purchase closing completed. Both buyers signed all documents. No issues to report. Uploading scan-back now.</div>
+              </div>
+              <span class="message-item__time">5 hrs ago</span>
+            </div>
+            <div class="message-item">
+              <div class="message-item__avatar" style="background: rgba(45,139,90,0.1); color: var(--color-success);"><i class="ri-check-double-line"></i></div>
+              <div class="message-item__content">
+                <div class="message-item__name">System Notification</div>
+                <div class="message-item__text">Monthly report for August 2026 is ready. 234 signings completed with a 98.7% on-time rate. View in Reports section.</div>
+              </div>
+              <span class="message-item__time">1 day ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ REPORTS PANEL ═══ -->
+      <div class="dashboard__content-panel" id="panel-reports" style="display:none;">
+        <div class="kpi-grid" style="margin-block-end: var(--space-6);">
+          <div class="kpi-card">
+            <div class="kpi-card__header">
+              <div class="kpi-card__icon"><i class="ri-file-chart-line"></i></div>
+            </div>
+            <div class="kpi-card__value">2,847</div>
+            <div class="kpi-card__label">Total Signings (YTD)</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card__header">
+              <div class="kpi-card__icon"><i class="ri-percent-line"></i></div>
+            </div>
+            <div class="kpi-card__value">98.4%</div>
+            <div class="kpi-card__label">Avg. Completion Rate</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card__header">
+              <div class="kpi-card__icon"><i class="ri-timer-line"></i></div>
+            </div>
+            <div class="kpi-card__value">1.6 hrs</div>
+            <div class="kpi-card__label">Avg. Turnaround Time</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card__header">
+              <div class="kpi-card__icon"><i class="ri-wallet-line"></i></div>
+            </div>
+            <div class="kpi-card__value">$427,050</div>
+            <div class="kpi-card__label">Total Revenue (YTD)</div>
+          </div>
+        </div>
+        <div class="dashboard__panel">
+          <div class="dashboard__panel-header">
+            <h3 class="dashboard__panel-title">Monthly Signing Volume</h3>
+            <button class="btn btn--ghost btn--sm"><i class="ri-download-2-line"></i> Export</button>
+          </div>
+          <div class="dashboard__panel-body">
+            <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-3); align-items: end; height: 200px; padding: var(--space-4);">
+              <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
+                <div style="width: 100%; background: var(--color-secondary); border-radius: var(--radius-sm); height: 60%;"></div>
+                <span style="font-size: var(--size-caption); color: var(--text-muted);">Apr</span>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
+                <div style="width: 100%; background: var(--color-secondary); border-radius: var(--radius-sm); height: 72%;"></div>
+                <span style="font-size: var(--size-caption); color: var(--text-muted);">May</span>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
+                <div style="width: 100%; background: var(--color-secondary); border-radius: var(--radius-sm); height: 55%;"></div>
+                <span style="font-size: var(--size-caption); color: var(--text-muted);">Jun</span>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
+                <div style="width: 100%; background: var(--color-secondary); border-radius: var(--radius-sm); height: 85%;"></div>
+                <span style="font-size: var(--size-caption); color: var(--text-muted);">Jul</span>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
+                <div style="width: 100%; background: var(--color-secondary); border-radius: var(--radius-sm); height: 90%;"></div>
+                <span style="font-size: var(--size-caption); color: var(--text-muted);">Aug</span>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
+                <div style="width: 100%; background: var(--color-accent); border-radius: var(--radius-sm); height: 95%;"></div>
+                <span style="font-size: var(--size-caption); color: var(--text-muted);">Sep</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SETTINGS PANEL ═══ -->
+      <div class="dashboard__content-panel" id="panel-settings" style="display:none;">
+        <div class="dashboard__panel">
+          <div class="dashboard__panel-header">
+            <h3 class="dashboard__panel-title">Account Settings</h3>
+          </div>
+          <div class="dashboard__panel-body">
+            <form style="max-width: 600px;">
+              <div class="form__group">
+                <label class="form__label" for="settings-name">Company Name</label>
+                <input type="text" id="settings-name" class="form__input" value="Summit Title Group">
+              </div>
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label" for="settings-first">First Name</label>
+                  <input type="text" id="settings-first" class="form__input" value="John">
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="settings-last">Last Name</label>
+                  <input type="text" id="settings-last" class="form__input" value="Doe">
+                </div>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="settings-email">Email</label>
+                <input type="email" id="settings-email" class="form__input" value="john@summittitle.com">
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="settings-phone">Phone</label>
+                <input type="tel" id="settings-phone" class="form__input" value="(555) 123-4567">
+              </div>
+              <div style="display: flex; gap: var(--space-3); margin-block-start: var(--space-5);">
+                <button type="button" class="btn btn--primary">Save Changes</button>
+                <button type="button" class="btn btn--secondary">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="dashboard__panel" style="margin-block-start: var(--space-6);">
+          <div class="dashboard__panel-header">
+            <h3 class="dashboard__panel-title">Notification Preferences</h3>
+          </div>
+          <div class="dashboard__panel-body">
+            <div style="display: flex; flex-direction: column; gap: var(--space-4); max-width: 600px;">
+              <label style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                <span style="font-size: var(--size-label); color: var(--text-primary);">Email notifications for new signings</span>
+                <input type="checkbox" checked style="accent-color: var(--color-secondary); width: 20px; height: 20px;">
+              </label>
+              <label style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                <span style="font-size: var(--size-label); color: var(--text-primary);">SMS alerts for signing status changes</span>
+                <input type="checkbox" checked style="accent-color: var(--color-secondary); width: 20px; height: 20px;">
+              </label>
+              <label style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                <span style="font-size: var(--size-label); color: var(--text-primary);">Document upload notifications</span>
+                <input type="checkbox" checked style="accent-color: var(--color-secondary); width: 20px; height: 20px;">
+              </label>
+              <label style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                <span style="font-size: var(--size-label); color: var(--text-primary);">Weekly summary reports</span>
+                <input type="checkbox" style="accent-color: var(--color-secondary); width: 20px; height: 20px;">
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
