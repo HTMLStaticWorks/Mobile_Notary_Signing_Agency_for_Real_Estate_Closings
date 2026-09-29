@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjQzhBNDVFIiAvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0LCAxNCkgc2NhbGUoMykiPgogICAgPHBhdGggZmlsbD0iIzFCMkE0QSIgZD0iTTIxIDJDMjEgMiAyMC4yNjMgNC4yMTEgMTkgNkwxNCAzLjVDMTQgMy41IDEzLjUgMyAxMyAzQzExLjUgMyAxMC41IDQgMTAuNSA0TDQgMTAuNUM0IDEwLjUgMyAxMS41IDMgMTNDMyAxMy41IDMuNSAxNCAzLjUgMTRMOC41IDE5TDYuNSAyMUgyVjIySDExTDEzIDIwTDE4LjUgMTVDMTguNSAxNSAxOSAxNC41IDE5IDE0QzE5IDEzLjUgMTggMTIuNSAxOCAxMi41QzE4IDEyLjUgMjIgNy41IDIyIDJIMjFaTTEzIDE4TDEwIDIxSDUuNUw3LjUgMTlMNSAxNi41QzUgMTYuNSA0LjUgMTYgNC41IDE1LjVDNC41IDE1IDUuNSAxNCA1LjUgMTRMMTEuNSA4QzExLjUgOCAxMi41IDcgMTMgNy41QzEzLjUgOCAxMyA4LjUgMTMgOC41TDguNSAxM0wxMSAxNS41TDE2LjUgMTBDMTYuNSAxMCAxNyA5LjUgMTcuNSAxMEMxOCAxMC41IDE3LjUgMTEgMTcuNSAxMUwxMyAxOFoiLz4KICA8L2c+Cjwvc3ZnPgo=">
   <title>SignSure Mobile Notary – Real Estate Signing Solutions</title>
   <meta name="description" content="Experience a new way to manage real estate closings. SignSure provides certified mobile notary signing agents for seamless property transactions.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
@@ -60,15 +60,19 @@
       <a href="blog.html" class="drawer__link"><i class="ri-article-line"></i> Blog</a>
       <a href="contact.html" class="drawer__link"><i class="ri-mail-line"></i> Contact</a>
       <a href="dashboard.html" class="drawer__link"><i class="ri-dashboard-line"></i> Dashboard</a>
-      <a href="login.html" class="drawer__link"><i class="ri-login-box-line"></i> Login</a>
-    </div>
+          </div>
     <div class="drawer__actions">
-      <button class="drawer__rtl-toggle" id="drawer-rtl-toggle" aria-label="Toggle RTL">
-        <i class="ri-arrow-left-right-line"></i>
-      </button>
-      <button class="drawer__theme-toggle" id="drawer-theme-toggle" aria-label="Toggle theme">
-        <i class="ri-moon-line theme-icon"></i>
-      </button>
+      <div class="drawer__actions-toggles">
+        <button class="drawer__rtl-toggle" id="drawer-rtl-toggle" aria-label="Toggle RTL">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+        <button class="drawer__theme-toggle" id="drawer-theme-toggle" aria-label="Toggle theme">
+          <i class="ri-moon-line theme-icon"></i>
+        </button>
+      </div>
+      <a href="login.html" class="drawer__login-btn">
+        <i class="ri-login-box-line"></i> Login
+      </a>
     </div>
   </aside>
 
@@ -178,7 +182,7 @@
             </div>
           </div>
           <div style="display: flex; gap: var(--space-5); background: var(--surface-card); padding: var(--space-6); border-radius: var(--radius); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); transition: all 0.3s ease; align-items: flex-start;" onmouseenter="this.style.boxShadow='var(--shadow)';this.style.transform='translateY(-3px)'" onmouseleave="this.style.boxShadow='var(--shadow-sm)';this.style.transform='none'">
-            <div style="width: 56px; height: 56px; border-radius: var(--radius); background: rgba(200,164,94,0.1); color: var(--color-secondary-dark); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;"><i class="ri-stamp-line"></i></div>
+            <div style="width: 56px; height: 56px; border-radius: var(--radius); background: rgba(200,164,94,0.1); color: var(--color-secondary-dark); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;"><i class="ri-quill-pen-line"></i></div>
             <div>
               <h3 style="font-family: var(--font-heading); font-weight: var(--weight-h3); font-size: var(--size-h5); margin-block-end: var(--space-2);">General Notary</h3>
               <p style="color: var(--text-secondary); font-size: var(--size-label); line-height: 1.6;">Affidavits, power of attorney, estate planning, and any standard notarization services.</p>
@@ -206,7 +210,9 @@
                 <div style="font-size: var(--size-caption); color: var(--text-muted);">Client Rating</div>
               </div>
             </div>
-            <a href="about.html" class="btn btn--primary">Learn About Us</a>
+            <div style="display: flex; justify-content: center; margin-block-start: var(--space-4);">
+              <a href="about.html" class="btn btn--primary">Learn About Us</a>
+            </div>
           </div>
           <div style="border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 3/4;">
             <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80" alt="Team collaboration" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
@@ -320,6 +326,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="ri-arrow-up-line"></i>
+  </button>
 
   <script src="assets/js/main.js"></script>
   <script>

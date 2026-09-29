@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjQzhBNDVFIiAvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0LCAxNCkgc2NhbGUoMykiPgogICAgPHBhdGggZmlsbD0iIzFCMkE0QSIgZD0iTTIxIDJDMjEgMiAyMC4yNjMgNC4yMTEgMTkgNkwxNCAzLjVDMTQgMy41IDEzLjUgMyAxMyAzQzExLjUgMyAxMC41IDQgMTAuNSA0TDQgMTAuNUM0IDEwLjUgMyAxMS41IDMgMTNDMyAxMy41IDMuNSAxNCAzLjUgMTRMOC41IDE5TDYuNSAyMUgyVjIySDExTDEzIDIwTDE4LjUgMTVDMTguNSAxNSAxOSAxNC41IDE5IDE0QzE5IDEzLjUgMTggMTIuNSAxOCAxMi41QzE4IDEyLjUgMjIgNy41IDIyIDJIMjFaTTEzIDE4TDEwIDIxSDUuNUw3LjUgMTlMNSAxNi41QzUgMTYuNSA0LjUgMTYgNC41IDE1LjVDNC41IDE1IDUuNSAxNCA1LjUgMTRMMTEuNSA4QzExLjUgOCAxMi41IDcgMTMgNy41QzEzLjUgOCAxMyA4LjUgMTMgOC41TDguNSAxM0wxMSAxNS41TDE2LjUgMTBDMTYuNSAxMCAxNyA5LjUgMTcuNSAxMEMxOCAxMC41IDE3LjUgMTEgMTcuNSAxMUwxMyAxOFoiLz4KICA8L2c+Cjwvc3ZnPgo=">
   <title>Services – SignSure Mobile Notary Signing Services</title>
   <meta name="description" content="Explore SignSure's comprehensive notary signing services including purchase closings, refinance closings, loan signings, and general notary services.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
@@ -57,11 +57,15 @@
       <a href="blog.html" class="drawer__link"><i class="ri-article-line"></i> Blog</a>
       <a href="contact.html" class="drawer__link"><i class="ri-mail-line"></i> Contact</a>
       <a href="dashboard.html" class="drawer__link"><i class="ri-dashboard-line"></i> Dashboard</a>
-      <a href="login.html" class="drawer__link"><i class="ri-login-box-line"></i> Login</a>
-    </div>
+          </div>
     <div class="drawer__actions">
-      <button class="drawer__rtl-toggle" id="drawer-rtl-toggle" aria-label="Toggle RTL"><i class="ri-arrow-left-right-line"></i></button>
-      <button class="drawer__theme-toggle" id="drawer-theme-toggle" aria-label="Toggle theme"><i class="ri-moon-line theme-icon"></i></button>
+      <div class="drawer__actions-toggles">
+        <button class="drawer__rtl-toggle" id="drawer-rtl-toggle" aria-label="Toggle RTL"><i class="ri-arrow-left-right-line"></i></button>
+        <button class="drawer__theme-toggle" id="drawer-theme-toggle" aria-label="Toggle theme"><i class="ri-moon-line theme-icon"></i></button>
+      </div>
+      <a href="login.html" class="drawer__login-btn">
+        <i class="ri-login-box-line"></i> Login
+      </a>
     </div>
   </aside>
 
@@ -75,6 +79,7 @@
     <!-- Service Details -->
     <section aria-label="Purchase Closings">
       <div class="container">
+        <!-- Service 1: Content Left, Image Right -->
         <div class="service-detail reveal">
           <div class="service-detail__content">
             <span class="section-tag"><i class="ri-home-line"></i> Real Estate</span>
@@ -94,10 +99,8 @@
           </div>
         </div>
 
-        <div class="service-detail reveal">
-          <div class="service-detail__image">
-            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80" alt="Refinance signing" loading="lazy">
-          </div>
+        <!-- Service 2: Image Left, Content Right -->
+        <div class="service-detail service-detail--reverse reveal">
           <div class="service-detail__content">
             <span class="section-tag"><i class="ri-refresh-line"></i> Lending</span>
             <h3>Refinance Closings</h3>
@@ -111,8 +114,12 @@
             </ul>
             <a href="contact.html" class="btn btn--primary">Book a Signing</a>
           </div>
+          <div class="service-detail__image">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80" alt="Refinance signing" loading="lazy">
+          </div>
         </div>
 
+        <!-- Service 3: Content Left, Image Right -->
         <div class="service-detail reveal">
           <div class="service-detail__content">
             <span class="section-tag"><i class="ri-file-text-line"></i> Specialty</span>
@@ -132,12 +139,10 @@
           </div>
         </div>
 
-        <div class="service-detail reveal">
-          <div class="service-detail__image">
-            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80" alt="General notary services" loading="lazy">
-          </div>
+        <!-- Service 4: Image Left, Content Right -->
+        <div class="service-detail service-detail--reverse reveal">
           <div class="service-detail__content">
-            <span class="section-tag"><i class="ri-stamp-line"></i> Notary</span>
+            <span class="section-tag"><i class="ri-quill-pen-line"></i> Notary</span>
             <h3>General Notary Services</h3>
             <p>Beyond real estate transactions, we provide comprehensive notary services for individuals and businesses requiring document authentication and witnessing.</p>
             <ul class="service-detail__features">
@@ -148,6 +153,9 @@
               <li><i class="ri-check-line"></i> Medical and healthcare directives</li>
             </ul>
             <a href="contact.html" class="btn btn--primary">Contact Us</a>
+          </div>
+          <div class="service-detail__image">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80" alt="General notary services" loading="lazy">
           </div>
         </div>
       </div>
@@ -264,6 +272,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="ri-arrow-up-line"></i>
+  </button>
 
   <script src="assets/js/main.js"></script>
 </body>

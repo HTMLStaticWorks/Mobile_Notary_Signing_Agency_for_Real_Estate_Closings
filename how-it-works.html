@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjQzhBNDVFIiAvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0LCAxNCkgc2NhbGUoMykiPgogICAgPHBhdGggZmlsbD0iIzFCMkE0QSIgZD0iTTIxIDJDMjEgMiAyMC4yNjMgNC4yMTEgMTkgNkwxNCAzLjVDMTQgMy41IDEzLjUgMyAxMyAzQzExLjUgMyAxMC41IDQgMTAuNSA0TDQgMTAuNUM0IDEwLjUgMyAxMS41IDMgMTNDMyAxMy41IDMuNSAxNCAzLjUgMTRMOC41IDE5TDYuNSAyMUgyVjIySDExTDEzIDIwTDE4LjUgMTVDMTguNSAxNSAxOSAxNC41IDE5IDE0QzE5IDEzLjUgMTggMTIuNSAxOCAxMi41QzE4IDEyLjUgMjIgNy41IDIyIDJIMjFaTTEzIDE4TDEwIDIxSDUuNUw3LjUgMTlMNSAxNi41QzUgMTYuNSA0LjUgMTYgNC41IDE1LjVDNC41IDE1IDUuNSAxNCA1LjUgMTRMMTEuNSA4QzExLjUgOCAxMi41IDcgMTMgNy41QzEzLjUgOCAxMyA4LjUgMTMgOC41TDguNSAxM0wxMSAxNS41TDE2LjUgMTBDMTYuNSAxMCAxNyA5LjUgMTcuNSAxMEMxOCAxMC41IDE3LjUgMTEgMTcuNSAxMUwxMyAxOFoiLz4KICA8L2c+Cjwvc3ZnPgo=">
   <title>How It Works – SignSure Signing Process Explained</title>
   <meta name="description" content="Learn how SignSure Mobile Notary works — from scheduling to document delivery. Our 4-step process ensures seamless real estate closings.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
@@ -47,8 +47,7 @@
       <a href="blog.html" class="drawer__link"><i class="ri-article-line"></i> Blog</a>
       <a href="contact.html" class="drawer__link"><i class="ri-mail-line"></i> Contact</a>
       <a href="dashboard.html" class="drawer__link"><i class="ri-dashboard-line"></i> Dashboard</a>
-      <a href="login.html" class="drawer__link"><i class="ri-login-box-line"></i> Login</a>
-    </div>
+          </div>
     <div class="drawer__actions">
       <button class="drawer__rtl-toggle" id="drawer-rtl-toggle" aria-label="Toggle RTL"><i class="ri-arrow-left-right-line"></i></button>
       <button class="drawer__theme-toggle" id="drawer-theme-toggle" aria-label="Toggle theme"><i class="ri-moon-line theme-icon"></i></button>
@@ -102,6 +101,7 @@
           <h2>What Happens at Each Stage</h2>
         </div>
 
+        <!-- Step 1: Content Left, Image Right -->
         <div class="service-detail reveal">
           <div class="service-detail__content">
             <h3><span style="color: var(--color-secondary);">Step 1.</span> Submit Your Request</h3>
@@ -119,10 +119,8 @@
           </div>
         </div>
 
-        <div class="service-detail reveal">
-          <div class="service-detail__image">
-            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80" alt="Agent assignment" loading="lazy">
-          </div>
+        <!-- Step 2: Image Left, Content Right (Zig-Zag) -->
+        <div class="service-detail service-detail--reverse reveal">
           <div class="service-detail__content">
             <h3><span style="color: var(--color-secondary);">Step 2.</span> Agent Assignment</h3>
             <p>Our intelligent matching system pairs your signing with the best available agent based on location, experience, and document type expertise.</p>
@@ -134,8 +132,12 @@
               <li><i class="ri-check-line"></i> Real-time status updates in your dashboard</li>
             </ul>
           </div>
+          <div class="service-detail__image">
+            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80" alt="Agent assignment" loading="lazy">
+          </div>
         </div>
 
+        <!-- Step 3: Content Left, Image Right (Zig-Zag) -->
         <div class="service-detail reveal">
           <div class="service-detail__content">
             <h3><span style="color: var(--color-secondary);">Step 3.</span> The Signing Session</h3>
@@ -153,10 +155,8 @@
           </div>
         </div>
 
-        <div class="service-detail reveal">
-          <div class="service-detail__image">
-            <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&q=80" alt="Document delivery" loading="lazy">
-          </div>
+        <!-- Step 4: Image Left, Content Right (Zig-Zag) -->
+        <div class="service-detail service-detail--reverse reveal">
           <div class="service-detail__content">
             <h3><span style="color: var(--color-secondary);">Step 4.</span> Document Delivery</h3>
             <p>After the signing, your completed package is secured and delivered back to you digitally and physically with speed and care.</p>
@@ -167,6 +167,9 @@
               <li><i class="ri-check-line"></i> Tracking number provided immediately</li>
               <li><i class="ri-check-line"></i> Invoice generated automatically</li>
             </ul>
+          </div>
+          <div class="service-detail__image">
+            <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&q=80" alt="Document delivery" loading="lazy">
           </div>
         </div>
       </div>
@@ -251,6 +254,10 @@
       <div class="footer__bottom"><p>&copy; 2026 SignSure Mobile Notary. All rights reserved.</p></div>
     </div>
   </footer>
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="ri-arrow-up-line"></i>
+  </button>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

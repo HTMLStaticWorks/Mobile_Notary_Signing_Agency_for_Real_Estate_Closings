@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjQzhBNDVFIiAvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0LCAxNCkgc2NhbGUoMykiPgogICAgPHBhdGggZmlsbD0iIzFCMkE0QSIgZD0iTTIxIDJDMjEgMiAyMC4yNjMgNC4yMTEgMTkgNkwxNCAzLjVDMTQgMy41IDEzLjUgMyAxMyAzQzExLjUgMyAxMC41IDQgMTAuNSA0TDQgMTAuNUM0IDEwLjUgMyAxMS41IDMgMTNDMyAxMy41IDMuNSAxNCAzLjUgMTRMOC41IDE5TDYuNSAyMUgyVjIySDExTDEzIDIwTDE4LjUgMTVDMTguNSAxNSAxOSAxNC41IDE5IDE0QzE5IDEzLjUgMTggMTIuNSAxOCAxMi41QzE4IDEyLjUgMjIgNy41IDIyIDJIMjFaTTEzIDE4TDEwIDIxSDUuNUw3LjUgMTlMNSAxNi41QzUgMTYuNSA0LjUgMTYgNC41IDE1LjVDNC41IDE1IDUuNSAxNCA1LjUgMTRMMTEuNSA4QzExLjUgOCAxMi41IDcgMTMgNy41QzEzLjUgOCAxMyA4LjUgMTMgOC41TDguNSAxM0wxMSAxNS41TDE2LjUgMTBDMTYuNSAxMCAxNyA5LjUgMTcuNSAxMEMxOCAxMC41IDE3LjUgMTEgMTcuNSAxMUwxMyAxOFoiLz4KICA8L2c+Cjwvc3ZnPgo=">
   <title>Contact Us – SignSure Mobile Notary</title>
   <meta name="description" content="Get in touch with SignSure Mobile Notary. Schedule a signing, request a quote, or learn more about our real estate closing services.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
@@ -47,8 +47,7 @@
       <a href="blog.html" class="drawer__link"><i class="ri-article-line"></i> Blog</a>
       <a href="contact.html" class="drawer__link active"><i class="ri-mail-line"></i> Contact</a>
       <a href="dashboard.html" class="drawer__link"><i class="ri-dashboard-line"></i> Dashboard</a>
-      <a href="login.html" class="drawer__link"><i class="ri-login-box-line"></i> Login</a>
-    </div>
+          </div>
     <div class="drawer__actions">
       <button class="drawer__rtl-toggle" id="drawer-rtl-toggle" aria-label="Toggle RTL"><i class="ri-arrow-left-right-line"></i></button>
       <button class="drawer__theme-toggle" id="drawer-theme-toggle" aria-label="Toggle theme"><i class="ri-moon-line theme-icon"></i></button>
@@ -104,11 +103,11 @@
             </div>
 
             <!-- Social -->
-            <div style="display: flex; gap: var(--space-3); margin-block-start: var(--space-4);">
-              <a href="#" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: all 0.2s;" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
-              <a href="#" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: all 0.2s;" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
-              <a href="#" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: all 0.2s;" aria-label="Twitter"><i class="ri-twitter-x-fill"></i></a>
-              <a href="#" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: all 0.2s;" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+            <div class="contact-social">
+              <a href="#" class="contact-social__link" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+              <a href="#" class="contact-social__link" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+              <a href="#" class="contact-social__link" aria-label="Twitter"><i class="ri-twitter-x-fill"></i></a>
+              <a href="#" class="contact-social__link" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
             </div>
           </div>
 
@@ -193,6 +192,10 @@
       <div class="footer__bottom"><p>&copy; 2026 SignSure Mobile Notary. All rights reserved.</p></div>
     </div>
   </footer>
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="ri-arrow-up-line"></i>
+  </button>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

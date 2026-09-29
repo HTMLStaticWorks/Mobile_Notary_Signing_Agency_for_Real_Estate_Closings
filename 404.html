@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjQzhBNDVFIiAvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0LCAxNCkgc2NhbGUoMykiPgogICAgPHBhdGggZmlsbD0iIzFCMkE0QSIgZD0iTTIxIDJDMjEgMiAyMC4yNjMgNC4yMTEgMTkgNkwxNCAzLjVDMTQgMy41IDEzLjUgMyAxMyAzQzExLjUgMyAxMC41IDQgMTAuNSA0TDQgMTAuNUM0IDEwLjUgMyAxMS41IDMgMTNDMyAxMy41IDMuNSAxNCAzLjUgMTRMOC41IDE5TDYuNSAyMUgyVjIySDExTDEzIDIwTDE4LjUgMTVDMTguNSAxNSAxOSAxNC41IDE5IDE0QzE5IDEzLjUgMTggMTIuNSAxOCAxMi41QzE4IDEyLjUgMjIgNy41IDIyIDJIMjFaTTEzIDE4TDEwIDIxSDUuNUw3LjUgMTlMNSAxNi41QzUgMTYuNSA0LjUgMTYgNC41IDE1LjVDNC41IDE1IDUuNSAxNCA1LjUgMTRMMTEuNSA4QzExLjUgOCAxMi41IDcgMTMgNy41QzEzLjUgOCAxMyA4LjUgMTMgOC41TDguNSAxM0wxMSAxNS41TDE2LjUgMTBDMTYuNSAxMCAxNyA5LjUgMTcuNSAxMEMxOCAxMC41IDE3LjUgMTEgMTcuNSAxMUwxMyAxOFoiLz4KICA8L2c+Cjwvc3ZnPgo=">
   <title>Page Not Found – SignSure Mobile Notary</title>
   <meta name="description" content="The page you're looking for doesn't exist. Return to SignSure Mobile Notary homepage.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
@@ -11,6 +11,14 @@
   <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
 <body>
+  <div class="auth-floating-toggles" style="position: absolute; top: 1.5rem; right: 1.5rem; display: flex; gap: 0.5rem; z-index: 100;">
+    <button class="navbar__rtl-toggle" id="rtl-toggle" aria-label="Toggle text direction" style="background: var(--surface-card); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); width: 40px; height: 40px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-primary); transition: all 0.3s;">
+      <i class="ri-arrow-left-right-line"></i>
+    </button>
+    <button class="navbar__theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" style="background: var(--surface-card); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); width: 40px; height: 40px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-primary); transition: all 0.3s;">
+      <i class="ri-moon-line theme-icon"></i>
+    </button>
+  </div>
 
   <main class="page-404">
     <div>
@@ -23,6 +31,11 @@
       </div>
     </div>
   </main>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="ri-arrow-up-line"></i>
+  </button>
 
   <script src="assets/js/main.js"></script>
 </body>
