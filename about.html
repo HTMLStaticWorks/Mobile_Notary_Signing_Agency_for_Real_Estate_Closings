@@ -14,7 +14,7 @@
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- NAVBAR -->
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
+  <nav class="navbar navbar--dark-bg" role="navigation" aria-label="Main navigation">
     <div class="navbar__inner">
       <a href="index.html" class="navbar__logo" aria-label="SignSure Home">
         <span class="navbar__logo-icon"><i class="ri-quill-pen-line"></i></span> SignSure
@@ -51,20 +51,19 @@
       <a href="blog.html" class="drawer__link"><i class="ri-article-line"></i> Blog</a>
       <a href="contact.html" class="drawer__link"><i class="ri-mail-line"></i> Contact</a>
       <a href="dashboard.html" class="drawer__link"><i class="ri-dashboard-line"></i> Dashboard</a>
-<<<<<<< HEAD
     </div>
-=======
-          </div>
->>>>>>> b0af425ead55b3bbd8d5260ee558962ff4201feb
     <div class="drawer__actions">
-      <button class="drawer__rtl-toggle" id="drawer-rtl-toggle" aria-label="Toggle RTL"><i class="ri-arrow-left-right-line"></i></button>
-      <button class="drawer__theme-toggle" id="drawer-theme-toggle" aria-label="Toggle theme"><i class="ri-moon-line theme-icon"></i></button>
+      <div class="drawer__actions-toggles">
+        <button class="drawer__rtl-toggle" id="drawer-rtl-toggle" aria-label="Toggle RTL"><i class="ri-arrow-left-right-line"></i></button>
+        <button class="drawer__theme-toggle" id="drawer-theme-toggle" aria-label="Toggle theme"><i class="ri-moon-line theme-icon"></i></button>
+      </div>
+      <a href="login.html" class="drawer__login-btn"><i class="ri-login-box-line"></i> Login</a>
     </div>
   </aside>
 
   <main id="main-content">
     <!-- Page Hero with Visual Backdrop -->
-    <section class="page-hero" aria-label="About Hero" style="position: relative; overflow: hidden; background: linear-gradient(rgba(17,29,53,0.85), rgba(17,29,53,0.92)), url('assets/images/about_hero.jpg') center/cover no-repeat; color: #fff; padding-block: calc(var(--navbar-height) + var(--space-8)) var(--space-10);">
+    <section class="page-hero" aria-label="About Hero" style="position: relative; overflow: hidden; background: linear-gradient(rgba(17,29,53,0.85), rgba(17,29,53,0.92)), url('assets/images/about_hero.jpg'), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80') center/cover no-repeat; color: #fff; padding-block: calc(var(--navbar-height) + var(--space-8)) var(--space-10);">
       <div class="container" style="position: relative; z-index: 1;">
         <span class="hero__tag" style="background: rgba(200,164,94,0.2); border-color: rgba(200,164,94,0.4); color: var(--color-secondary);"><i class="ri-shield-star-line"></i> Established 2009 • National Network</span>
         <h1 style="color: #fff; margin-block: var(--space-3); font-size: var(--size-h1);">Our Story &amp; Mission</h1>
@@ -101,7 +100,7 @@
       <div class="container">
         <div class="about-grid reveal">
           <div class="about__image">
-            <img src="assets/images/about_handshake.jpg" alt="SignSure mobile notary successful closing handshake" loading="lazy">
+            <img src="assets/images/about_handshake.jpg" alt="SignSure mobile notary successful closing handshake" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80';">
             <div class="about__image-badge">2009 <span>Founded</span></div>
           </div>
           <div class="about__content">
@@ -131,7 +130,7 @@
             </ul>
           </div>
           <div class="about__image">
-            <img src="assets/images/about_compliance.jpg" alt="Document audit and closing compliance review" loading="lazy">
+            <img src="assets/images/about_compliance.jpg" alt="Document audit and closing compliance review" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80';">
             <div class="about__image-badge"><i class="ri-shield-fill" style="color: var(--color-secondary);"></i> <span>$1M E&amp;O Protected</span></div>
           </div>
         </div>
@@ -143,7 +142,7 @@
       <div class="container">
         <div class="about-grid reveal" style="align-items: center;">
           <div class="about__image">
-            <img src="assets/images/about_team_office.jpg" alt="SignSure centralized coordination team and dispatch hub" loading="lazy">
+            <img src="assets/images/about_team_office.jpg" alt="SignSure centralized coordination team and dispatch hub" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80';">
             <div class="about__image-badge"><i class="ri-flashlight-fill" style="color: var(--color-secondary);"></i> <span>&lt;30m Dispatch SLA</span></div>
           </div>
           <div class="about__content">

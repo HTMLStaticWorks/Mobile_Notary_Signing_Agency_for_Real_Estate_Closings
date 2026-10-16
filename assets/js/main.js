@@ -126,6 +126,12 @@ function initNavbar() {
       closeBtn.addEventListener('click', closeDrawer);
     }
 
+    // Close drawer when any drawer link is clicked
+    const drawerLinks = drawer.querySelectorAll('.drawer__link, .drawer__login-btn');
+    drawerLinks.forEach(link => {
+      link.addEventListener('click', closeDrawer);
+    });
+
     // Close on Escape
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && drawer.classList.contains('active')) {
@@ -135,9 +141,9 @@ function initNavbar() {
   }
 
   function closeDrawer() {
-    hamburger.classList.remove('active');
-    drawer.classList.remove('active');
-    overlay.classList.remove('active');
+    if (hamburger) hamburger.classList.remove('active');
+    if (drawer) drawer.classList.remove('active');
+    if (overlay) overlay.classList.remove('active');
     document.body.style.overflow = '';
   }
 }
