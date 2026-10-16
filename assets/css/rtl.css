@@ -7,15 +7,26 @@
   direction: rtl;
 }
 
-/* Drawer flips */
-[dir="rtl"] .navbar__drawer {
-  inset-inline-end: auto;
-  inset-inline-start: 0;
-  transform: translateX(-100%);
+/* Desktop: Hide drawer & hamburger in RTL as well */
+@media (min-width: 1025px) {
+  [dir="rtl"] .navbar__drawer,
+  [dir="rtl"] .drawer-overlay,
+  [dir="rtl"] .navbar__hamburger {
+    display: none !important;
+  }
 }
 
-[dir="rtl"] .navbar__drawer.active {
-  transform: translateX(0);
+/* Mobile Drawer flips */
+@media (max-width: 1024px) {
+  [dir="rtl"] .navbar__drawer {
+    right: auto;
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  [dir="rtl"] .navbar__drawer.active {
+    transform: translateX(0);
+  }
 }
 
 /* Timeline */
@@ -40,11 +51,6 @@
   border-inline-end: 3px solid var(--color-secondary);
   padding-inline-start: 0;
   padding-inline-end: var(--space-5);
-}
-
-/* Service detail alternate flip */
-[dir="rtl"] .service-detail:nth-child(even) {
-  direction: rtl;
 }
 
 /* Dashboard sidebar */
@@ -86,3 +92,17 @@
   inset-inline-start: 12%;
   inset-inline-end: 12%;
 }
+
+/* Back to top button flip in RTL */
+[dir="rtl"] .back-to-top {
+  right: auto;
+  left: 2rem;
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .back-to-top {
+    right: auto;
+    left: 1.25rem;
+  }
+}
+

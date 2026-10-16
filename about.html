@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjQzhBNDVFIiAvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0LCAxNCkgc2NhbGUoMykiPgogICAgPHBhdGggZmlsbD0iIzFCMkE0QSIgZD0iTTIxIDJDMjEgMiAyMC4yNjMgNC4yMTEgMTkgNkwxNCAzLjVDMTQgMy41IDEzLjUgMyAxMyAzQzExLjUgMyAxMC41IDQgMTAuNSA0TDQgMTAuNUM0IDEwLjUgMyAxMS41IDMgMTNDMyAxMy41IDMuNSAxNCAzLjUgMTRMOC41IDE5TDYuNSAyMUgyVjIySDExTDEzIDIwTDE4LjUgMTVDMTguNSAxNSAxOSAxNC41IDE5IDE0QzE5IDEzLjUgMTggMTIuNSAxOCAxMi41QzE4IDEyLjUgMjIgNy41IDIyIDJIMjFaTTEzIDE4TDEwIDIxSDUuNUw3LjUgMTlMNSAxNi41QzUgMTYuNSA0LjUgMTYgNC41IDE1LjVDNC41IDE1IDUuNSAxNCA1LjUgMTRMMTEuNSA4QzExLjUgOCAxMi41IDcgMTMgNy41QzEzLjUgOCAxMyA4LjUgMTMgOC41TDguNSAxM0wxMSAxNS41TDE2LjUgMTBDMTYuNSAxMCAxNyA5LjUgMTcuNSAxMEMxOCAxMC41IDE3LjUgMTEgMTcuNSAxMUwxMyAxOFoiLz4KICA8L2c+Cjwvc3ZnPgo=">
   <title>About Us – SignSure Mobile Notary Story &amp; Mission</title>
   <meta name="description" content="Learn about SignSure Mobile Notary's 15+ year journey in providing reliable notary signing services for real estate closings nationwide.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
@@ -22,6 +22,7 @@
       <div class="navbar__links">
         <a href="index.html" class="navbar__link">Home</a>
         <a href="home2.html" class="navbar__link">Home 2</a>
+        <a href="about.html" class="navbar__link active">About Us</a>
         <a href="services.html" class="navbar__link">Services</a>
         <a href="coverage.html" class="navbar__link">Coverage Area</a>
         <a href="how-it-works.html" class="navbar__link">How It Works</a>
@@ -43,13 +44,13 @@
     <div class="drawer__links">
       <a href="index.html" class="drawer__link"><i class="ri-home-4-line"></i> Home</a>
       <a href="home2.html" class="drawer__link"><i class="ri-home-heart-line"></i> Home 2</a>
+      <a href="about.html" class="drawer__link active"><i class="ri-information-line"></i> About Us</a>
       <a href="services.html" class="drawer__link"><i class="ri-briefcase-line"></i> Services</a>
       <a href="coverage.html" class="drawer__link"><i class="ri-map-pin-line"></i> Coverage Area</a>
       <a href="how-it-works.html" class="drawer__link"><i class="ri-route-line"></i> How It Works</a>
       <a href="blog.html" class="drawer__link"><i class="ri-article-line"></i> Blog</a>
       <a href="contact.html" class="drawer__link"><i class="ri-mail-line"></i> Contact</a>
       <a href="dashboard.html" class="drawer__link"><i class="ri-dashboard-line"></i> Dashboard</a>
-      <a href="login.html" class="drawer__link"><i class="ri-login-box-line"></i> Login</a>
     </div>
     <div class="drawer__actions">
       <button class="drawer__rtl-toggle" id="drawer-rtl-toggle" aria-label="Toggle RTL"><i class="ri-arrow-left-right-line"></i></button>
@@ -58,10 +59,37 @@
   </aside>
 
   <main id="main-content">
-    <!-- Page Hero -->
-    <section class="page-hero" aria-label="About Hero">
-      <h1>Our Story</h1>
-      <p class="lead">15+ years of delivering trusted mobile notary signing services for the real estate industry.</p>
+    <!-- Page Hero with Visual Backdrop -->
+    <section class="page-hero" aria-label="About Hero" style="position: relative; overflow: hidden; background: linear-gradient(rgba(17,29,53,0.85), rgba(17,29,53,0.92)), url('assets/images/about_hero.jpg') center/cover no-repeat; color: #fff; padding-block: calc(var(--navbar-height) + var(--space-8)) var(--space-10);">
+      <div class="container" style="position: relative; z-index: 1;">
+        <span class="hero__tag" style="background: rgba(200,164,94,0.2); border-color: rgba(200,164,94,0.4); color: var(--color-secondary);"><i class="ri-shield-star-line"></i> Established 2009 • National Network</span>
+        <h1 style="color: #fff; margin-block: var(--space-3); font-size: var(--size-h1);">Our Story &amp; Mission</h1>
+        <p class="lead" style="color: rgba(255,255,255,0.85); max-width: 650px; margin-inline: auto;">15+ years of delivering trusted, compliant, and punctual mobile notary signing services for title companies, escrow officers, and mortgage lenders nationwide.</p>
+        
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-4); margin-block-start: var(--space-6);">
+          <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); padding: var(--space-3) var(--space-5); display: flex; align-items: center; gap: var(--space-3);">
+            <i class="ri-award-fill" style="color: var(--color-secondary); font-size: 1.5rem;"></i>
+            <div style="text-align: start;">
+              <div style="font-weight: 700; font-size: 1.1rem; color: #fff;">15,000+</div>
+              <div style="font-size: 0.75rem; color: rgba(255,255,255,0.7);">Closings Completed</div>
+            </div>
+          </div>
+          <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); padding: var(--space-3) var(--space-5); display: flex; align-items: center; gap: var(--space-3);">
+            <i class="ri-user-star-fill" style="color: var(--color-secondary); font-size: 1.5rem;"></i>
+            <div style="text-align: start;">
+              <div style="font-weight: 700; font-size: 1.1rem; color: #fff;">3,000+</div>
+              <div style="font-size: 0.75rem; color: rgba(255,255,255,0.7);">Vetted Notary Agents</div>
+            </div>
+          </div>
+          <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); padding: var(--space-3) var(--space-5); display: flex; align-items: center; gap: var(--space-3);">
+            <i class="ri-map-pin-2-fill" style="color: var(--color-secondary); font-size: 1.5rem;"></i>
+            <div style="text-align: start;">
+              <div style="font-weight: 700; font-size: 1.1rem; color: #fff;">48 States</div>
+              <div style="font-size: 0.75rem; color: rgba(255,255,255,0.7);">Nationwide Coverage</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Company Story -->
@@ -69,7 +97,7 @@
       <div class="container">
         <div class="about-grid reveal">
           <div class="about__image">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="SignSure founding team" loading="lazy">
+            <img src="assets/images/about_handshake.jpg" alt="SignSure mobile notary successful closing handshake" loading="lazy">
             <div class="about__image-badge">2009 <span>Founded</span></div>
           </div>
           <div class="about__content">
@@ -78,6 +106,51 @@
             <p class="lead">SignSure Mobile Notary was born from a simple observation — title companies needed more reliable, professional notary signing agents they could trust with their most important closings.</p>
             <p>Founded in 2009 by veteran closing agent Maria Gonzalez, SignSure started as a local signing service in Southern California. Today, we serve title companies, lenders, and settlement agents across 48 states with a network of over 3,000 background-checked and certified notary professionals.</p>
             <p>Our commitment remains unchanged: deliver every signing on time, error-free, and with the professionalism your clients expect.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compliance & Quality Control Showcase -->
+    <section style="background: var(--surface-card); border-block: 1px solid var(--border-light);" aria-label="Quality and Compliance">
+      <div class="container">
+        <div class="about-grid reveal" style="align-items: center;">
+          <div class="about__content">
+            <span class="section-tag"><i class="ri-shield-check-line"></i> Zero-Error Standard</span>
+            <h2>Rigorous Quality Assurance &amp; Compliance</h2>
+            <p class="lead">In real estate closings, a missed initial or unclear notary stamp can halt funding. We eliminate closing table delays through institutional-grade QA.</p>
+            <ul class="about__list">
+              <li><i class="ri-check-line"></i> <strong>Double-Audit Document Inspection:</strong> Every signing package is checked page-by-page before scan-backs are released.</li>
+              <li><i class="ri-check-line"></i> <strong>$1,000,000 E&amp;O Insurance:</strong> Comprehensive Errors &amp; Omissions insurance protecting lenders, title officers, and buyers.</li>
+              <li><i class="ri-check-line"></i> <strong>NNA Certified &amp; Background Checked:</strong> 100% of our agents undergo annual federal background investigations.</li>
+              <li><i class="ri-check-line"></i> <strong>2-Hour Guaranteed Scan-Back:</strong> Executed packages delivered digitally within 120 minutes of signature completion.</li>
+            </ul>
+          </div>
+          <div class="about__image">
+            <img src="assets/images/about_compliance.jpg" alt="Document audit and closing compliance review" loading="lazy">
+            <div class="about__image-badge"><i class="ri-shield-fill" style="color: var(--color-secondary);"></i> <span>$1M E&amp;O Protected</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Operations & Nationwide Coordination Showcase -->
+    <section aria-label="National Operations">
+      <div class="container">
+        <div class="about-grid reveal" style="align-items: center;">
+          <div class="about__image">
+            <img src="assets/images/about_team_office.jpg" alt="SignSure centralized coordination team and dispatch hub" loading="lazy">
+            <div class="about__image-badge"><i class="ri-flashlight-fill" style="color: var(--color-secondary);"></i> <span>&lt;30m Dispatch SLA</span></div>
+          </div>
+          <div class="about__content">
+            <span class="section-tag"><i class="ri-building-line"></i> National Operations Hub</span>
+            <h2>24/7 Scheduling Coordinators at Your Service</h2>
+            <p class="lead">Our centralized operations center monitors every order in real-time, coordinating with title officers, escrow officers, and signers across all time zones.</p>
+            <p>Whether you need an agent at a borrower's home at 8:00 PM, an emergency signing at a hospital bedside, or a Saturday morning closing, our dispatch system matches an expert notary in minutes.</p>
+            <div style="display: flex; gap: var(--space-4); margin-block-start: var(--space-5);">
+              <a href="services.html" class="btn btn--primary">View Our Services</a>
+              <a href="coverage.html" class="btn btn--secondary">Check State Coverage</a>
+            </div>
           </div>
         </div>
       </div>
@@ -233,6 +306,10 @@
       <div class="footer__bottom"><p>&copy; 2026 SignSure Mobile Notary. All rights reserved.</p></div>
     </div>
   </footer>
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="ri-arrow-up-line"></i>
+  </button>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

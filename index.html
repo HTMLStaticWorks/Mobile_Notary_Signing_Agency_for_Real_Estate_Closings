@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjQzhBNDVFIiAvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0LCAxNCkgc2NhbGUoMykiPgogICAgPHBhdGggZmlsbD0iIzFCMkE0QSIgZD0iTTIxIDJDMjEgMiAyMC4yNjMgNC4yMTEgMTkgNkwxNCAzLjVDMTQgMy41IDEzLjUgMyAxMyAzQzExLjUgMyAxMC41IDQgMTAuNSA0TDQgMTAuNUM0IDEwLjUgMyAxMS41IDMgMTNDMyAxMy41IDMuNSAxNCAzLjUgMTRMOC41IDE5TDYuNSAyMUgyVjIySDExTDEzIDIwTDE4LjUgMTVDMTguNSAxNSAxOSAxNC41IDE5IDE0QzE5IDEzLjUgMTggMTIuNSAxOCAxMi41QzE4IDEyLjUgMjIgNy41IDIyIDJIMjFaTTEzIDE4TDEwIDIxSDUuNUw3LjUgMTlMNSAxNi41QzUgMTYuNSA0LjUgMTYgNC41IDE1LjVDNC41IDE1IDUuNSAxNCA1LjUgMTRMMTEuNSA4QzExLjUgOCAxMi41IDcgMTMgNy41QzEzLjUgOCAxMyA4LjUgMTMgOC41TDguNSAxM0wxMSAxNS41TDE2LjUgMTBDMTYuNSAxMCAxNyA5LjUgMTcuNSAxMEMxOCAxMC41IDE3LjUgMTEgMTcuNSAxMUwxMyAxOFoiLz4KICA8L2c+Cjwvc3ZnPgo=">
   <title>SignSure Mobile Notary – Trusted Real Estate Closings</title>
   <meta name="description" content="SignSure Mobile Notary delivers fast, reliable, and convenient mobile notary signing services for real estate closings. Serving title companies with professional notary agents.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
@@ -41,6 +41,7 @@
       <div class="navbar__links">
         <a href="index.html" class="navbar__link active">Home</a>
         <a href="home2.html" class="navbar__link">Home 2</a>
+        <a href="about.html" class="navbar__link">About Us</a>
         <a href="services.html" class="navbar__link">Services</a>
         <a href="coverage.html" class="navbar__link">Coverage Area</a>
         <a href="how-it-works.html" class="navbar__link">How It Works</a>
@@ -76,21 +77,26 @@
     <div class="drawer__links">
       <a href="index.html" class="drawer__link active"><i class="ri-home-4-line"></i> Home</a>
       <a href="home2.html" class="drawer__link"><i class="ri-home-heart-line"></i> Home 2</a>
+      <a href="about.html" class="drawer__link"><i class="ri-information-line"></i> About Us</a>
       <a href="services.html" class="drawer__link"><i class="ri-briefcase-line"></i> Services</a>
       <a href="coverage.html" class="drawer__link"><i class="ri-map-pin-line"></i> Coverage Area</a>
       <a href="how-it-works.html" class="drawer__link"><i class="ri-route-line"></i> How It Works</a>
       <a href="blog.html" class="drawer__link"><i class="ri-article-line"></i> Blog</a>
       <a href="contact.html" class="drawer__link"><i class="ri-mail-line"></i> Contact</a>
       <a href="dashboard.html" class="drawer__link"><i class="ri-dashboard-line"></i> Dashboard</a>
-      <a href="login.html" class="drawer__link"><i class="ri-login-box-line"></i> Login</a>
     </div>
     <div class="drawer__actions">
-      <button class="drawer__rtl-toggle" id="drawer-rtl-toggle" aria-label="Toggle RTL">
-        <i class="ri-arrow-left-right-line"></i>
-      </button>
-      <button class="drawer__theme-toggle" id="drawer-theme-toggle" aria-label="Toggle theme">
-        <i class="ri-moon-line theme-icon"></i>
-      </button>
+      <div class="drawer__actions-toggles">
+        <button class="drawer__rtl-toggle" id="drawer-rtl-toggle" aria-label="Toggle RTL">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+        <button class="drawer__theme-toggle" id="drawer-theme-toggle" aria-label="Toggle theme">
+          <i class="ri-moon-line theme-icon"></i>
+        </button>
+      </div>
+      <a href="login.html" class="drawer__login-btn">
+        <i class="ri-login-box-line"></i> Login
+      </a>
     </div>
   </aside>
 
@@ -98,7 +104,7 @@
     <!-- ═══ HERO ═══ -->
     <section class="hero" aria-label="Hero">
       <div class="hero__bg">
-        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80" alt="Real estate closing" loading="eager">
+        <img src="assets/images/hero_home1.jpg" alt="Professional real estate notary closing signing ceremony" loading="eager">
       </div>
       <div class="hero__shapes">
         <div class="hero__shape"></div>
@@ -106,30 +112,43 @@
         <div class="hero__shape"></div>
       </div>
       <div class="container">
-        <div class="hero__content">
-          <span class="hero__tag"><i class="ri-shield-check-line"></i> Trusted Notary Services</span>
-          <h1 class="hero__title">Fast, Reliable &amp; <span class="highlight">Convenient</span> Real Estate Closings</h1>
-          <p class="hero__text">Professional mobile notary signing agents at your door — ensuring seamless closings for title companies, lenders, and real estate professionals nationwide.</p>
-          <div class="hero__actions">
-            <a href="services.html" class="btn btn--primary btn--lg">Explore Services</a>
-            <a href="how-it-works.html" class="btn btn--secondary btn--lg" style="border-color: rgba(255,255,255,0.3); color: #fff;">How It Works</a>
+        <div class="hero__layout">
+          <div class="hero__content">
+            <span class="hero__tag"><i class="ri-shield-check-line"></i> Trusted Notary Services</span>
+            <h1 class="hero__title">Fast, Reliable &amp; <span class="highlight">Convenient</span> Real Estate Closings</h1>
+            <p class="hero__text">Professional mobile notary signing agents at your door — ensuring seamless closings for title companies, lenders, and real estate professionals nationwide.</p>
+            <div class="hero__actions">
+              <a href="services.html" class="btn btn--primary btn--lg">Explore Services</a>
+              <a href="how-it-works.html" class="btn btn--secondary btn--lg" style="border-color: rgba(255,255,255,0.3); color: #fff;">How It Works</a>
+            </div>
           </div>
-          <div class="hero__stats">
-            <div>
-              <div class="hero__stat-value">15K+</div>
-              <div class="hero__stat-label">Closings Completed</div>
+
+          <div class="hero__stats-card">
+            <div class="hero__stats-card-header">
+              <span class="hero__stats-badge"><i class="ri-verified-badge-line"></i> Verified Track Record</span>
+              <span class="hero__stats-sub">National Coverage</span>
             </div>
-            <div>
-              <div class="hero__stat-value">98%</div>
-              <div class="hero__stat-label">On-Time Rate</div>
+            <div class="hero__stats-grid">
+              <div class="hero__stat-box">
+                <div class="hero__stat-value">15K+</div>
+                <div class="hero__stat-label">Closings Completed</div>
+              </div>
+              <div class="hero__stat-box">
+                <div class="hero__stat-value">98%</div>
+                <div class="hero__stat-label">On-Time Rate</div>
+              </div>
+              <div class="hero__stat-box">
+                <div class="hero__stat-value">500+</div>
+                <div class="hero__stat-label">Title Partners</div>
+              </div>
+              <div class="hero__stat-box">
+                <div class="hero__stat-value">48</div>
+                <div class="hero__stat-label">States Covered</div>
+              </div>
             </div>
-            <div>
-              <div class="hero__stat-value">500+</div>
-              <div class="hero__stat-label">Title Partners</div>
-            </div>
-            <div>
-              <div class="hero__stat-value">48</div>
-              <div class="hero__stat-label">States Covered</div>
+            <div class="hero__stats-card-footer">
+              <div class="hero__stats-feature"><i class="ri-shield-check-fill"></i> $1M E&amp;O Insured</div>
+              <div class="hero__stats-feature"><i class="ri-time-fill"></i> 24/7 Mobile Dispatch</div>
             </div>
           </div>
         </div>
@@ -146,28 +165,60 @@
         </div>
         <div class="grid grid--4 reveal">
           <div class="service-card">
-            <div class="service-card__icon"><i class="ri-home-line"></i></div>
-            <h3 class="service-card__title">Purchase Closings</h3>
-            <p class="service-card__text">Complete signing coordination for residential and commercial property purchases, ensuring accurate document execution.</p>
-            <a href="services.html" class="service-card__link">Learn More <i class="ri-arrow-right-s-line"></i></a>
+            <div class="service-card__image-wrap">
+              <img src="assets/images/service_purchase.jpg" alt="Purchase Closings" class="service-card__image" loading="lazy">
+              <span class="service-card__badge">Residential & Commercial</span>
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Purchase Closings</h3>
+              <p class="service-card__text">Complete signing coordination for residential and commercial purchases with deed execution, buyer &amp; seller packages, and instant scan-backs.</p>
+              <div class="service-card__footer">
+                <a href="services.html" class="service-card__link">Learn More <i class="ri-arrow-right-s-line"></i></a>
+                <span class="service-card__tag"><i class="ri-time-line"></i> Same-Day</span>
+              </div>
+            </div>
           </div>
           <div class="service-card">
-            <div class="service-card__icon"><i class="ri-refresh-line"></i></div>
-            <h3 class="service-card__title">Refinance Closings</h3>
-            <p class="service-card__text">Streamlined refinance signings with attention to detail and compliance — completed at the borrower's convenience.</p>
-            <a href="services.html" class="service-card__link">Learn More <i class="ri-arrow-right-s-line"></i></a>
+            <div class="service-card__image-wrap">
+              <img src="assets/images/service_refinance.jpg" alt="Refinance Closings" class="service-card__image" loading="lazy">
+              <span class="service-card__badge">Lender Packages</span>
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Refinance Closings</h3>
+              <p class="service-card__text">Streamlined refinance signings with meticulous attention to detail, rescission tracking, and compliance — executed at the borrower's preferred location.</p>
+              <div class="service-card__footer">
+                <a href="services.html" class="service-card__link">Learn More <i class="ri-arrow-right-s-line"></i></a>
+                <span class="service-card__tag"><i class="ri-shield-check-line"></i> Certified</span>
+              </div>
+            </div>
           </div>
           <div class="service-card">
-            <div class="service-card__icon"><i class="ri-file-text-line"></i></div>
-            <h3 class="service-card__title">Loan Signings</h3>
-            <p class="service-card__text">Professional loan signing agents trained in all loan document packages — HELOC, reverse mortgage, and more.</p>
-            <a href="services.html" class="service-card__link">Learn More <i class="ri-arrow-right-s-line"></i></a>
+            <div class="service-card__image-wrap">
+              <img src="assets/images/service_loan.jpg" alt="Loan Signings" class="service-card__image" loading="lazy">
+              <span class="service-card__badge">Specialty Mortgages</span>
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Loan Signings</h3>
+              <p class="service-card__text">Certified loan signing agents trained in HELOCs, reverse mortgages (HECM), construction draws, VA, FHA, and commercial loan packages.</p>
+              <div class="service-card__footer">
+                <a href="services.html" class="service-card__link">Learn More <i class="ri-arrow-right-s-line"></i></a>
+                <span class="service-card__tag"><i class="ri-file-text-line"></i> Error-Free</span>
+              </div>
+            </div>
           </div>
           <div class="service-card">
-            <div class="service-card__icon"><i class="ri-stamp-line"></i></div>
-            <h3 class="service-card__title">General Notary</h3>
-            <p class="service-card__text">Beyond real estate — we handle affidavits, powers of attorney, estate documents, and all notarization needs.</p>
-            <a href="services.html" class="service-card__link">Learn More <i class="ri-arrow-right-s-line"></i></a>
+            <div class="service-card__image-wrap">
+              <img src="assets/images/service_general.jpg" alt="General Notary" class="service-card__image" loading="lazy">
+              <span class="service-card__badge">Mobile & In-Office</span>
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">General Notary</h3>
+              <p class="service-card__text">Beyond real estate closings — prompt notarization for powers of attorney, trust agreements, deeds, affidavits, and corporate legal documents.</p>
+              <div class="service-card__footer">
+                <a href="services.html" class="service-card__link">Learn More <i class="ri-arrow-right-s-line"></i></a>
+                <span class="service-card__tag"><i class="ri-check-double-line"></i> Prompt</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -382,6 +433,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="ri-arrow-up-line"></i>
+  </button>
 
   <script src="assets/js/main.js"></script>
 </body>

@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initRTL();
   initNavbar();
+  initBackToTop();
   initScrollReveal();
   initLazyImages();
   initTestimonialCarousel();
@@ -39,11 +40,7 @@ function initTheme() {
     drawerThemeToggle.addEventListener('click', toggleTheme);
   }
 
-  // Dashboard toggle
-  const dashboardThemeToggle = document.getElementById('dashboard-theme-toggle');
-  if (dashboardThemeToggle) {
-    dashboardThemeToggle.addEventListener('click', toggleTheme);
-  }
+
 }
 
 function toggleTheme() {
@@ -82,10 +79,7 @@ function initRTL() {
     drawerRtlToggle.addEventListener('click', toggleRTL);
   }
 
-  const dashboardRtlToggle = document.getElementById('dashboard-rtl-toggle');
-  if (dashboardRtlToggle) {
-    dashboardRtlToggle.addEventListener('click', toggleRTL);
-  }
+
 }
 
 function toggleRTL() {
@@ -400,3 +394,38 @@ function showFormSuccess(form) {
     }, 5000);
   }
 }
+
+// ═══════════════════════════════════════════════════════
+// BACK TO TOP BUTTON
+// ═══════════════════════════════════════════════════════
+function initBackToTop() {
+  let btn = document.getElementById('back-to-top');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.id = 'back-to-top';
+    btn.className = 'back-to-top';
+    btn.setAttribute('aria-label', 'Back to top');
+    btn.setAttribute('title', 'Back to top');
+    btn.innerHTML = '<i class="ri-arrow-up-line"></i>';
+    document.body.appendChild(btn);
+  }
+
+  const toggleVisibility = () => {
+    if (window.scrollY > 250) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  };
+
+  window.addEventListener('scroll', toggleVisibility, { passive: true });
+  toggleVisibility();
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+

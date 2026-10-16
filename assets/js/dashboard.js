@@ -16,22 +16,43 @@ document.addEventListener('DOMContentLoaded', () => {
 // SIDEBAR TOGGLE (Mobile)
 // ═══════════════════════════════════════════════════════
 function initDashboardSidebar() {
-  const toggle = document.getElementById('sidebar-toggle');
-  const sidebar = document.querySelector('.dashboard__sidebar');
+  const toggle  = document.getElementById('sidebar-toggle');
+  const sidebar = document.getElementById('dashboard-sidebar') || document.querySelector('.dashboard__sidebar');
+  const overlay = document.getElementById('sidebar-overlay');
 
   if (!toggle || !sidebar) return;
 
+  function openSidebar() {
+    sidebar.classList.add('active');
+    if (overlay) { overlay.classList.add('active'); }
+    document.body.style.overflow = 'hidden'; // prevent background scroll
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove('active');
+    if (overlay) { overlay.classList.remove('active'); }
+    document.body.style.overflow = '';
+  }
+
   toggle.addEventListener('click', () => {
-    sidebar.classList.toggle('active');
+    sidebar.classList.contains('active') ? closeSidebar() : openSidebar();
   });
 
-  // Close on click outside
-  document.addEventListener('click', (e) => {
-    if (window.innerWidth <= 1024 &&
-        sidebar.classList.contains('active') &&
-        !sidebar.contains(e.target) &&
-        !toggle.contains(e.target)) {
-      sidebar.classList.remove('active');
+  // Close button inside sidebar
+  const closeBtn = document.getElementById('sidebar-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeSidebar);
+  }
+
+  // Close when overlay is clicked
+  if (overlay) {
+    overlay.addEventListener('click', closeSidebar);
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+      closeSidebar();
     }
   });
 }
@@ -66,9 +87,13 @@ function initDashboardNav() {
         headerTitle.textContent = link.textContent.trim();
       }
 
-      // Close sidebar on mobile
+      // Close sidebar on mobile (with overlay)
       if (window.innerWidth <= 1024) {
-        document.querySelector('.dashboard__sidebar').classList.remove('active');
+        const sidebar = document.getElementById('dashboard-sidebar') || document.querySelector('.dashboard__sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+        if (sidebar) sidebar.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
+        document.body.style.overflow = '';
       }
     });
   });

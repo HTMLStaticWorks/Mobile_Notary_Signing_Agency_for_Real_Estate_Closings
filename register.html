@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjQzhBNDVFIiAvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0LCAxNCkgc2NhbGUoMykiPgogICAgPHBhdGggZmlsbD0iIzFCMkE0QSIgZD0iTTIxIDJDMjEgMiAyMC4yNjMgNC4yMTEgMTkgNkwxNCAzLjVDMTQgMy41IDEzLjUgMyAxMyAzQzExLjUgMyAxMC41IDQgMTAuNSA0TDQgMTAuNUM0IDEwLjUgMyAxMS41IDMgMTNDMyAxMy41IDMuNSAxNCAzLjUgMTRMOC41IDE5TDYuNSAyMUgyVjIySDExTDEzIDIwTDE4LjUgMTVDMTguNSAxNSAxOSAxNC41IDE5IDE0QzE5IDEzLjUgMTggMTIuNSAxOCAxMi41QzE4IDEyLjUgMjIgNy41IDIyIDJIMjFaTTEzIDE4TDEwIDIxSDUuNUw3LjUgMTlMNSAxNi41QzUgMTYuNSA0LjUgMTYgNC41IDE1LjVDNC41IDE1IDUuNSAxNCA1LjUgMTRMMTEuNSA4QzExLjUgOCAxMi41IDcgMTMgNy41QzEzLjUgOCAxMyA4LjUgMTMgOC41TDguNSAxM0wxMSAxNS41TDE2LjUgMTBDMTYuNSAxMCAxNyA5LjUgMTcuNSAxMEMxOCAxMC41IDE3LjUgMTEgMTcuNSAxMUwxMyAxOFoiLz4KICA8L2c+Cjwvc3ZnPgo=">
   <title>Register – SignSure Client Portal</title>
   <meta name="description" content="Create your SignSure title company client account. Start scheduling notary signings and managing your closings online.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
@@ -12,12 +12,23 @@
 </head>
 <body class="auth-page">
 
+  <!-- Theme & RTL Toggles -->
+  <div class="auth-floating-toggles">
+    <button class="auth-toggle-btn" id="rtl-toggle" aria-label="Toggle text direction">
+      <i class="ri-arrow-left-right-line"></i>
+    </button>
+    <button class="auth-toggle-btn" id="theme-toggle" aria-label="Toggle dark mode">
+      <i class="ri-moon-line theme-icon"></i>
+    </button>
+  </div>
+
   <main>
     <div class="auth-card">
-      <div class="auth-card__logo">
+      <!-- Brand Name → links to home -->
+      <a href="index.html" class="auth-card__logo" aria-label="Go to SignSure home">
         <span class="auth-card__logo-icon"><i class="ri-quill-pen-line"></i></span>
         SignSure
-      </div>
+      </a>
       <h1 class="auth-card__title">Create Account</h1>
       <p class="auth-card__subtitle">Start managing your real estate closings</p>
 
@@ -27,21 +38,35 @@
           <input type="text" id="register-name" name="name" class="form__input" placeholder="John Smith" required>
           <div class="form__error"></div>
         </div>
+
         <div class="form__group">
           <label class="form__label" for="register-email">Email <span class="required">*</span></label>
           <input type="email" id="register-email" name="email" class="form__input" placeholder="you@titlecompany.com" required>
           <div class="form__error"></div>
         </div>
+
         <div class="form__group">
           <label class="form__label" for="register-password">Password <span class="required">*</span></label>
-          <input type="password" id="register-password" name="password" class="form__input" placeholder="Minimum 8 characters" required>
+          <div class="form__input-wrapper">
+            <input type="password" id="register-password" name="password" class="form__input" placeholder="Minimum 8 characters" required>
+            <button type="button" class="form__eye-btn" id="toggle-register-password" aria-label="Toggle password visibility">
+              <i class="ri-eye-line" id="register-eye-icon"></i>
+            </button>
+          </div>
           <div class="form__error"></div>
         </div>
+
         <div class="form__group">
           <label class="form__label" for="register-confirm">Confirm Password <span class="required">*</span></label>
-          <input type="password" id="register-confirm" name="confirm-password" class="form__input" placeholder="Repeat your password" required>
+          <div class="form__input-wrapper">
+            <input type="password" id="register-confirm" name="confirm-password" class="form__input" placeholder="Repeat your password" required>
+            <button type="button" class="form__eye-btn" id="toggle-register-confirm" aria-label="Toggle confirm password visibility">
+              <i class="ri-eye-line" id="register-confirm-eye-icon"></i>
+            </button>
+          </div>
           <div class="form__error"></div>
         </div>
+
         <div class="form__group">
           <label class="form__checkbox">
             <input type="checkbox" name="terms" required>
@@ -49,6 +74,7 @@
           </label>
           <div class="form__error"></div>
         </div>
+
         <button type="submit" class="btn btn--primary btn--full">Register</button>
         <div class="form__success">
           <i class="ri-check-line"></i> Account created successfully! Redirecting to login...
@@ -81,6 +107,29 @@
     </div>
   </main>
 
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+
   <script src="assets/js/main.js"></script>
+  <script>
+    // Eye icon toggles for register page
+    function setupEyeToggle(btnId, inputId, iconId) {
+      document.getElementById(btnId).addEventListener('click', function() {
+        const input = document.getElementById(inputId);
+        const icon = document.getElementById(iconId);
+        if (input.type === 'password') {
+          input.type = 'text';
+          icon.className = 'ri-eye-off-line';
+        } else {
+          input.type = 'password';
+          icon.className = 'ri-eye-line';
+        }
+      });
+    }
+    setupEyeToggle('toggle-register-password', 'register-password', 'register-eye-icon');
+    setupEyeToggle('toggle-register-confirm', 'register-confirm', 'register-confirm-eye-icon');
+  </script>
 </body>
 </html>

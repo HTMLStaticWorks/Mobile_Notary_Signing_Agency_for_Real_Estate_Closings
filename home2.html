@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjQzhBNDVFIiAvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0LCAxNCkgc2NhbGUoMykiPgogICAgPHBhdGggZmlsbD0iIzFCMkE0QSIgZD0iTTIxIDJDMjEgMiAyMC4yNjMgNC4yMTEgMTkgNkwxNCAzLjVDMTQgMy41IDEzLjUgMyAxMyAzQzExLjUgMyAxMC41IDQgMTAuNSA0TDQgMTAuNUM0IDEwLjUgMyAxMS41IDMgMTNDMyAxMy41IDMuNSAxNCAzLjUgMTRMOC41IDE5TDYuNSAyMUgyVjIySDExTDEzIDIwTDE4LjUgMTVDMTguNSAxNSAxOSAxNC41IDE5IDE0QzE5IDEzLjUgMTggMTIuNSAxOCAxMi41QzE4IDEyLjUgMjIgNy41IDIyIDJIMjFaTTEzIDE4TDEwIDIxSDUuNUw3LjUgMTlMNSAxNi41QzUgMTYuNSA0LjUgMTYgNC41IDE1LjVDNC41IDE1IDUuNSAxNCA1LjUgMTRMMTEuNSA4QzExLjUgOCAxMi41IDcgMTMgNy41QzEzLjUgOCAxMyA4LjUgMTMgOC41TDguNSAxM0wxMSAxNS41TDE2LjUgMTBDMTYuNSAxMCAxNyA5LjUgMTcuNSAxMEMxOCAxMC41IDE3LjUgMTEgMTcuNSAxMUwxMyAxOFoiLz4KICA8L2c+Cjwvc3ZnPgo=">
   <title>SignSure Mobile Notary – Real Estate Signing Solutions</title>
   <meta name="description" content="Experience a new way to manage real estate closings. SignSure provides certified mobile notary signing agents for seamless property transactions.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
@@ -23,6 +23,7 @@
       <div class="navbar__links">
         <a href="index.html" class="navbar__link">Home</a>
         <a href="home2.html" class="navbar__link active">Home 2</a>
+        <a href="about.html" class="navbar__link">About Us</a>
         <a href="services.html" class="navbar__link">Services</a>
         <a href="coverage.html" class="navbar__link">Coverage Area</a>
         <a href="how-it-works.html" class="navbar__link">How It Works</a>
@@ -54,26 +55,31 @@
     <div class="drawer__links">
       <a href="index.html" class="drawer__link"><i class="ri-home-4-line"></i> Home</a>
       <a href="home2.html" class="drawer__link active"><i class="ri-home-heart-line"></i> Home 2</a>
+      <a href="about.html" class="drawer__link"><i class="ri-information-line"></i> About Us</a>
       <a href="services.html" class="drawer__link"><i class="ri-briefcase-line"></i> Services</a>
       <a href="coverage.html" class="drawer__link"><i class="ri-map-pin-line"></i> Coverage Area</a>
       <a href="how-it-works.html" class="drawer__link"><i class="ri-route-line"></i> How It Works</a>
       <a href="blog.html" class="drawer__link"><i class="ri-article-line"></i> Blog</a>
       <a href="contact.html" class="drawer__link"><i class="ri-mail-line"></i> Contact</a>
       <a href="dashboard.html" class="drawer__link"><i class="ri-dashboard-line"></i> Dashboard</a>
-      <a href="login.html" class="drawer__link"><i class="ri-login-box-line"></i> Login</a>
     </div>
     <div class="drawer__actions">
-      <button class="drawer__rtl-toggle" id="drawer-rtl-toggle" aria-label="Toggle RTL">
-        <i class="ri-arrow-left-right-line"></i>
-      </button>
-      <button class="drawer__theme-toggle" id="drawer-theme-toggle" aria-label="Toggle theme">
-        <i class="ri-moon-line theme-icon"></i>
-      </button>
+      <div class="drawer__actions-toggles">
+        <button class="drawer__rtl-toggle" id="drawer-rtl-toggle" aria-label="Toggle RTL">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+        <button class="drawer__theme-toggle" id="drawer-theme-toggle" aria-label="Toggle theme">
+          <i class="ri-moon-line theme-icon"></i>
+        </button>
+      </div>
+      <a href="login.html" class="drawer__login-btn">
+        <i class="ri-login-box-line"></i> Login
+      </a>
     </div>
   </aside>
 
   <main id="main-content">
-    <!-- ═══ HERO (Split Layout) ═══ -->
+    <!-- ═══ HERO (Split Layout - Notary Signing Theme) ═══ -->
     <section class="hero hero--alt" aria-label="Hero" style="padding-block: 0;">
       <div class="hero__shapes">
         <div class="hero__shape"></div>
@@ -83,38 +89,247 @@
       <div class="container">
         <div class="hero--split">
           <div class="hero__content" style="opacity: 0; animation: slideInLeft 0.8s ease 0.3s both;">
-            <span class="hero__tag" style="animation: fadeSlideUp 0.6s ease 0.2s both;"><i class="ri-verified-badge-line"></i> Licensed &amp; Insured</span>
-            <h1 style="color: var(--text-primary); margin-block-end: var(--space-5); opacity: 0; animation: slideInLeft 0.8s ease 0.4s both;">Your Closing, <span style="color: var(--color-secondary-dark);">Simplified.</span></h1>
-            <p style="color: var(--text-secondary); font-size: var(--size-lead); margin-block-end: var(--space-7); max-width: 480px; opacity: 0; animation: slideInLeft 0.8s ease 0.6s both;">Mobile notary signing agents dispatched to any location — homes, offices, hospitals, or wherever your clients need us.</p>
+            <span class="hero__tag" style="animation: fadeSlideUp 0.6s ease 0.2s both;"><i class="ri-verified-badge-line"></i> Licensed &amp; $1M Insured • 24/7 Mobile Dispatch</span>
+            <h1 style="color: var(--text-primary); margin-block-end: var(--space-4); opacity: 0; animation: slideInLeft 0.8s ease 0.4s both;">Your Real Estate Closing, <span style="color: var(--color-secondary-dark);">Simplified.</span></h1>
+            <p style="color: var(--text-secondary); font-size: var(--size-lead); margin-block-end: var(--space-6); max-width: 520px; line-height: 1.65; opacity: 0; animation: slideInLeft 0.8s ease 0.6s both;">Professional certified mobile notary signing agents dispatched to any doorstep, title office, hospital, or conference room nationwide — ensuring 100% error-free execution on critical closing deadlines.</p>
             <div style="display: flex; flex-wrap: wrap; gap: var(--space-4); opacity: 0; animation: slideInLeft 0.8s ease 0.8s both;">
-              <a href="contact.html" class="btn btn--primary btn--lg">Schedule a Signing</a>
-              <a href="services.html" class="btn btn--secondary btn--lg">View Services</a>
+              <a href="contact.html" class="btn btn--primary btn--lg"><i class="ri-calendar-check-line"></i> Schedule a Signing</a>
+              <a href="#core-services" class="btn btn--secondary btn--lg"><i class="ri-compass-3-line"></i> Explore Core Services</a>
             </div>
 
             <!-- Interactive counter -->
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); margin-block-start: var(--space-9); opacity: 0; animation: fadeSlideUp 0.8s ease 1s both;">
-              <div style="text-align: center; padding: var(--space-4); background: var(--surface-elevated); border-radius: var(--radius);">
-                <div style="font-family: var(--font-heading); font-weight: var(--weight-h2); font-size: var(--size-h3); color: var(--color-accent);" id="counter-closings">0</div>
-                <div style="font-size: var(--size-caption); color: var(--text-muted); margin-block-start: var(--space-1);">Closings This Month</div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); margin-block-start: var(--space-8); opacity: 0; animation: fadeSlideUp 0.8s ease 1s both;">
+              <div style="text-align: center; padding: var(--space-4); background: var(--surface-card); border-radius: var(--radius); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+                <div style="font-family: var(--font-heading); font-weight: var(--weight-h2); font-size: var(--size-h3); color: var(--color-secondary-dark);" id="counter-closings">0</div>
+                <div style="font-size: var(--size-caption); color: var(--text-muted); margin-block-start: var(--space-1); font-weight: 500;">Closings This Month</div>
               </div>
-              <div style="text-align: center; padding: var(--space-4); background: var(--surface-elevated); border-radius: var(--radius);">
-                <div style="font-family: var(--font-heading); font-weight: var(--weight-h2); font-size: var(--size-h3); color: var(--color-accent);" id="counter-agents">0</div>
-                <div style="font-size: var(--size-caption); color: var(--text-muted); margin-block-start: var(--space-1);">Active Agents</div>
+              <div style="text-align: center; padding: var(--space-4); background: var(--surface-card); border-radius: var(--radius); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+                <div style="font-family: var(--font-heading); font-weight: var(--weight-h2); font-size: var(--size-h3); color: var(--color-secondary-dark);" id="counter-agents">0</div>
+                <div style="font-size: var(--size-caption); color: var(--text-muted); margin-block-start: var(--space-1); font-weight: 500;">Active Signing Agents</div>
               </div>
-              <div style="text-align: center; padding: var(--space-4); background: var(--surface-elevated); border-radius: var(--radius);">
-                <div style="font-family: var(--font-heading); font-weight: var(--weight-h2); font-size: var(--size-h3); color: var(--color-accent);" id="counter-rating">0</div>
-                <div style="font-size: var(--size-caption); color: var(--text-muted); margin-block-start: var(--space-1);">Client Rating</div>
+              <div style="text-align: center; padding: var(--space-4); background: var(--surface-card); border-radius: var(--radius); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+                <div style="font-family: var(--font-heading); font-weight: var(--weight-h2); font-size: var(--size-h3); color: var(--color-secondary-dark);" id="counter-rating">0</div>
+                <div style="font-size: var(--size-caption); color: var(--text-muted); margin-block-start: var(--space-1); font-weight: 500;">Client Satisfaction</div>
               </div>
             </div>
           </div>
-          <div class="hero__visual" style="opacity: 0; animation: slideInRight 0.8s ease 0.5s both;">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Beautiful home for closing" loading="eager">
+
+          <div class="hero__visual" style="position: relative; opacity: 0; animation: slideInRight 0.8s ease 0.5s both; border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 20px 45px rgba(0,0,0,0.15); border: 1px solid var(--border-light);">
+            <img src="assets/images/hero_home2.jpg" alt="Certified mobile notary signing agent conducting real estate closing" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="eager">
+            <div style="position: absolute; bottom: 20px; inset-inline: 20px; background: rgba(17, 29, 53, 0.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(200, 164, 94, 0.4); border-radius: var(--radius); padding: 14px 18px; color: #fff; display: flex; align-items: center; justify-content: space-between; gap: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(45, 139, 122, 0.3); color: #3cd4b8; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; flex-shrink: 0;"><i class="ri-checkbox-circle-fill"></i></div>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.9rem; color: #fff;">Certified Notary Signing Agent</div>
+                  <div style="font-size: 0.75rem; color: rgba(255,255,255,0.75);">NNA Background Screened • $1M E&amp;O Protected</div>
+                </div>
+              </div>
+              <span style="background: rgba(200, 164, 94, 0.25); border: 1px solid rgba(200, 164, 94, 0.45); color: var(--color-secondary); font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: var(--radius-full); text-transform: uppercase; white-space: nowrap;">Dispatch Ready</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══ HOW IT WORKS (Visual) ═══ -->
+    <!-- ═══ CORE SECTION SERVICES (Comprehensive Redesign) ═══ -->
+    <section id="core-services" aria-label="Core Section Services" style="background: var(--surface-bg);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag"><i class="ri-shield-star-line"></i> Institutional Grade</span>
+          <h2>Our Core Signing Services</h2>
+          <p class="section-subtitle">Comprehensive mobile and digital notary solutions tailored to title companies, escrow officers, mortgage lenders, and legal firms nationwide.</p>
+        </div>
+
+        <!-- 6-Grid Core Services -->
+        <div class="grid grid--3 reveal" style="gap: var(--space-6); margin-block-end: var(--space-10);">
+          
+          <!-- Service 1: Purchase Closings -->
+          <div class="service-card">
+            <div class="service-card__image-wrap">
+              <img src="assets/images/service_purchase.jpg" alt="Purchase Closings" class="service-card__image" loading="lazy">
+              <span class="service-card__badge">Residential &amp; Commercial</span>
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Purchase Closings</h3>
+              <p class="service-card__text">End-to-end signing coordination for buyer and seller packages, residential home purchases, and commercial acquisitions.</p>
+              <ul style="list-style: none; padding: 0; margin-block-end: var(--space-4); display: flex; flex-direction: column; gap: 6px; font-size: 0.85rem; color: var(--text-secondary);">
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> Buyer &amp; Seller deed execution</li>
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> Split closings &amp; multi-party coordination</li>
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> Guaranteed same-day escrow scan-back</li>
+              </ul>
+              <div class="service-card__footer">
+                <a href="services.html" class="service-card__link">Learn More <i class="ri-arrow-right-s-line"></i></a>
+                <span class="service-card__tag"><i class="ri-time-line"></i> Rapid Dispatch</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2: Refinance Closings -->
+          <div class="service-card">
+            <div class="service-card__image-wrap">
+              <img src="assets/images/service_refinance.jpg" alt="Refinance Closings" class="service-card__image" loading="lazy">
+              <span class="service-card__badge">Lender Packages</span>
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Refinance Closings</h3>
+              <p class="service-card__text">Accurate execution of Conventional, FHA, VA, USDA, and cash-out refinance packages tailored to borrower schedules.</p>
+              <ul style="list-style: none; padding: 0; margin-block-end: var(--space-4); display: flex; flex-direction: column; gap: 6px; font-size: 0.85rem; color: var(--text-secondary);">
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> Strict right-of-rescission tracking</li>
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> Evening &amp; weekend home signings</li>
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> Zero missed signatures guarantee</li>
+              </ul>
+              <div class="service-card__footer">
+                <a href="services.html" class="service-card__link">Learn More <i class="ri-arrow-right-s-line"></i></a>
+                <span class="service-card__tag"><i class="ri-shield-check-line"></i> Compliant</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3: Specialized Loan Signings -->
+          <div class="service-card">
+            <div class="service-card__image-wrap">
+              <img src="assets/images/service_loan.jpg" alt="Specialized Loan Signings" class="service-card__image" loading="lazy">
+              <span class="service-card__badge">Specialty Lending</span>
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Loan Signings &amp; HELOCs</h3>
+              <p class="service-card__text">Expert handling of specialized loan structures including Home Equity Lines of Credit, Reverse Mortgages (HECM), and construction loans.</p>
+              <ul style="list-style: none; padding: 0; margin-block-end: var(--space-4); display: flex; flex-direction: column; gap: 6px; font-size: 0.85rem; color: var(--text-secondary);">
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> Reverse mortgage certified agents</li>
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> Commercial lending &amp; SBA documentation</li>
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> Pre-signing borrower document walkthrough</li>
+              </ul>
+              <div class="service-card__footer">
+                <a href="services.html" class="service-card__link">Learn More <i class="ri-arrow-right-s-line"></i></a>
+                <span class="service-card__tag"><i class="ri-file-text-line"></i> Certified NNA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 4: General Notary & Estate Documents -->
+          <div class="service-card">
+            <div class="service-card__image-wrap">
+              <img src="assets/images/service_general.jpg" alt="General Notary Services" class="service-card__image" loading="lazy">
+              <span class="service-card__badge">Mobile &amp; In-Office</span>
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">General Notary &amp; Estate</h3>
+              <p class="service-card__text">Document authentication for individuals, law firms, and corporations including estate planning, powers of attorney, and affidavits.</p>
+              <ul style="list-style: none; padding: 0; margin-block-end: var(--space-4); display: flex; flex-direction: column; gap: 6px; font-size: 0.85rem; color: var(--text-secondary);">
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> Living trusts, wills &amp; healthcare directives</li>
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> Grant deeds, quitclaim deeds &amp; POA</li>
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> Official embosser stamp &amp; journal record</li>
+              </ul>
+              <div class="service-card__footer">
+                <a href="services.html" class="service-card__link">Learn More <i class="ri-arrow-right-s-line"></i></a>
+                <span class="service-card__tag"><i class="ri-quill-pen-line"></i> Legal Seal</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 5: Remote Online Notarization (RON) -->
+          <div class="service-card">
+            <div class="service-card__image-wrap">
+              <img src="assets/images/service_ron.jpg" alt="Remote Online Notarization" class="service-card__image" loading="lazy">
+              <span class="service-card__badge">100% Digital / Nationwide</span>
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Remote Online Notary (RON)</h3>
+              <p class="service-card__text">State-approved digital closing sessions allowing signers anywhere in the world to execute real estate deeds via encrypted video audio.</p>
+              <ul style="list-style: none; padding: 0; margin-block-end: var(--space-4); display: flex; flex-direction: column; gap: 6px; font-size: 0.85rem; color: var(--text-secondary);">
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> MISMO-compliant encrypted platform</li>
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> Biometric ID credential analysis (KBA)</li>
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> Instant downloadable tamper-evident docs</li>
+              </ul>
+              <div class="service-card__footer">
+                <a href="services.html" class="service-card__link">Learn More <i class="ri-arrow-right-s-line"></i></a>
+                <span class="service-card__tag"><i class="ri-computer-line"></i> Paperless</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 6: 24/7 Emergency & Hospital Dispatch -->
+          <div class="service-card">
+            <div class="service-card__image-wrap">
+              <img src="assets/images/service_rush.jpg" alt="24/7 Rush Mobile Dispatch" class="service-card__image" loading="lazy">
+              <span class="service-card__badge">Under 30m Dispatch</span>
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Rush &amp; Hospital Dispatch</h3>
+              <p class="service-card__text">Immediate response mobile notary agents dispatched to hospitals, assisted living, rehab centers, or urgent title deadline rescues.</p>
+              <ul style="list-style: none; padding: 0; margin-block-end: var(--space-4); display: flex; flex-direction: column; gap: 6px; font-size: 0.85rem; color: var(--text-secondary);">
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> 24/7 on-call coordinator team</li>
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> Bedside &amp; healthcare facility protocols</li>
+                <li><i class="ri-check-line" style="color: var(--color-accent); font-weight: 700;"></i> Last-minute closing table saves</li>
+              </ul>
+              <div class="service-card__footer">
+                <a href="contact.html" class="service-card__link">Request Urgent <i class="ri-arrow-right-s-line"></i></a>
+                <span class="service-card__tag"><i class="ri-flashlight-line"></i> 24/7 Ready</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Interactive Closing Quote & Dispatch Estimator Widget -->
+        <div class="reveal" style="background: var(--surface-card); border-radius: var(--radius-lg); border: 1px solid var(--border-light); padding: var(--space-8); box-shadow: var(--shadow); position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 0; inset-inline: 0; height: 4px; background: linear-gradient(90deg, var(--color-secondary), var(--color-accent));"></div>
+          <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-8); align-items: center;">
+            <div>
+              <span class="section-tag" style="margin-block-end: var(--space-2);"><i class="ri-calculator-line"></i> Instant Estimator</span>
+              <h3 style="font-size: 1.5rem; margin-block-end: var(--space-3);">Calculate Your Signing Dispatch</h3>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; margin-block-end: var(--space-5);">Select your closing requirements to see instant agent dispatch availability and estimated turnaround.</p>
+              
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-block-end: var(--space-5);">
+                <div>
+                  <label for="calc-service" style="display: block; font-size: 0.82rem; font-weight: 600; margin-block-end: 6px; color: var(--text-primary);">Service Type</label>
+                  <select id="calc-service" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: var(--surface-bg); color: var(--text-primary); font-size: 0.9rem;" onchange="updateEstimate()">
+                    <option value="150" data-name="Purchase Closing">Purchase Closing ($150)</option>
+                    <option value="140" data-name="Refinance Closing">Refinance Closing ($140)</option>
+                    <option value="160" data-name="Specialized Loan / HELOC">Specialized Loan / HELOC ($160)</option>
+                    <option value="95" data-name="General Notary">General Notary ($95)</option>
+                    <option value="110" data-name="Remote Online Notary (RON)">Remote Online Notary - RON ($110)</option>
+                    <option value="185" data-name="Hospital / Emergency Rush">Hospital / Rush Dispatch ($185)</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="calc-location" style="display: block; font-size: 0.82rem; font-weight: 600; margin-block-end: 6px; color: var(--text-primary);">Signing Location</label>
+                  <select id="calc-location" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: var(--surface-bg); color: var(--text-primary); font-size: 0.9rem;" onchange="updateEstimate()">
+                    <option value="0">Borrower's Residence (Included)</option>
+                    <option value="0">Title / Escrow Office (Included)</option>
+                    <option value="25">Hospital / Assisted Living (+ $25)</option>
+                    <option value="0">Online Virtual Room (100% Digital)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: var(--space-4); align-items: center;">
+                <label style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-secondary); cursor: pointer;">
+                  <input type="checkbox" id="calc-same-day" style="accent-color: var(--color-secondary);" onchange="updateEstimate()"> Same-Day Urgent Dispatch (+ $30)
+                </label>
+              </div>
+            </div>
+
+            <!-- Calculated Output Card -->
+            <div style="background: var(--surface-elevated); border-radius: var(--radius); padding: var(--space-6); border: 1px solid var(--border-light); text-align: center;">
+              <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; color: var(--color-secondary-dark);">Estimated Signing Fee</span>
+              <div id="calc-total-display" style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--text-primary); margin-block: var(--space-2);">$150</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted); margin-block-end: var(--space-4);">
+                <i class="ri-shield-check-fill" style="color: var(--color-accent);"></i> Includes Background-Checked Agent, $1M E&amp;O &amp; 2h Scan-Back
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; padding-block: 8px; border-block: 1px dashed var(--border-light); margin-block-end: var(--space-5);">
+                <span style="color: var(--text-secondary);">Agent Matching:</span>
+                <span style="font-weight: 600; color: var(--color-accent);" id="calc-eta">&lt; 30 Minutes</span>
+              </div>
+              <a href="contact.html" class="btn btn--primary btn--full" id="calc-cta-btn"><i class="ri-check-line"></i> Book This Signing Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══ HOW IT WORKS (Visual 4 Steps) ═══ -->
     <section style="background: var(--surface-elevated);" aria-label="Process Overview">
       <div class="container">
         <div class="section-header reveal">
@@ -147,49 +362,8 @@
       </div>
     </section>
 
-    <!-- ═══ SERVICES (Different layout) ═══ -->
-    <section aria-label="Services Overview">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag"><i class="ri-briefcase-line"></i> Our Expertise</span>
-          <h2>Tailored to Title &amp; Settlement</h2>
-          <p class="section-subtitle">Every signing type, every document package — handled by trained professionals who know the industry.</p>
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6);" class="reveal">
-          <div style="display: flex; gap: var(--space-5); background: var(--surface-card); padding: var(--space-6); border-radius: var(--radius); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); transition: all 0.3s ease; align-items: flex-start;" onmouseenter="this.style.boxShadow='var(--shadow)';this.style.transform='translateY(-3px)'" onmouseleave="this.style.boxShadow='var(--shadow-sm)';this.style.transform='none'">
-            <div style="width: 56px; height: 56px; border-radius: var(--radius); background: rgba(200,164,94,0.1); color: var(--color-secondary-dark); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;"><i class="ri-home-line"></i></div>
-            <div>
-              <h3 style="font-family: var(--font-heading); font-weight: var(--weight-h3); font-size: var(--size-h5); margin-block-end: var(--space-2);">Purchase Closings</h3>
-              <p style="color: var(--text-secondary); font-size: var(--size-label); line-height: 1.6;">Seamless coordination for buyer and seller signings on residential and commercial purchases.</p>
-            </div>
-          </div>
-          <div style="display: flex; gap: var(--space-5); background: var(--surface-card); padding: var(--space-6); border-radius: var(--radius); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); transition: all 0.3s ease; align-items: flex-start;" onmouseenter="this.style.boxShadow='var(--shadow)';this.style.transform='translateY(-3px)'" onmouseleave="this.style.boxShadow='var(--shadow-sm)';this.style.transform='none'">
-            <div style="width: 56px; height: 56px; border-radius: var(--radius); background: rgba(45,139,122,0.1); color: var(--color-accent); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;"><i class="ri-refresh-line"></i></div>
-            <div>
-              <h3 style="font-family: var(--font-heading); font-weight: var(--weight-h3); font-size: var(--size-h5); margin-block-end: var(--space-2);">Refinance Closings</h3>
-              <p style="color: var(--text-secondary); font-size: var(--size-label); line-height: 1.6;">Accurate and efficient refinance signings at the borrower's preferred time and location.</p>
-            </div>
-          </div>
-          <div style="display: flex; gap: var(--space-5); background: var(--surface-card); padding: var(--space-6); border-radius: var(--radius); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); transition: all 0.3s ease; align-items: flex-start;" onmouseenter="this.style.boxShadow='var(--shadow)';this.style.transform='translateY(-3px)'" onmouseleave="this.style.boxShadow='var(--shadow-sm)';this.style.transform='none'">
-            <div style="width: 56px; height: 56px; border-radius: var(--radius); background: rgba(74,127,181,0.1); color: var(--color-info); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;"><i class="ri-file-text-line"></i></div>
-            <div>
-              <h3 style="font-family: var(--font-heading); font-weight: var(--weight-h3); font-size: var(--size-h5); margin-block-end: var(--space-2);">Loan Signings</h3>
-              <p style="color: var(--text-secondary); font-size: var(--size-label); line-height: 1.6;">HELOC, reverse mortgage, VA, FHA — our agents are trained in all major loan document packages.</p>
-            </div>
-          </div>
-          <div style="display: flex; gap: var(--space-5); background: var(--surface-card); padding: var(--space-6); border-radius: var(--radius); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); transition: all 0.3s ease; align-items: flex-start;" onmouseenter="this.style.boxShadow='var(--shadow)';this.style.transform='translateY(-3px)'" onmouseleave="this.style.boxShadow='var(--shadow-sm)';this.style.transform='none'">
-            <div style="width: 56px; height: 56px; border-radius: var(--radius); background: rgba(200,164,94,0.1); color: var(--color-secondary-dark); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;"><i class="ri-stamp-line"></i></div>
-            <div>
-              <h3 style="font-family: var(--font-heading); font-weight: var(--weight-h3); font-size: var(--size-h5); margin-block-end: var(--space-2);">General Notary</h3>
-              <p style="color: var(--text-secondary); font-size: var(--size-label); line-height: 1.6;">Affidavits, power of attorney, estate planning, and any standard notarization services.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ ABOUT (Different layout) ═══ -->
-    <section style="background: var(--surface-elevated);" aria-label="About SignSure">
+    <!-- ═══ ABOUT (Quality Table & Trust) ═══ -->
+    <section aria-label="About SignSure">
       <div class="container">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-9); align-items: center;" class="reveal">
           <div>
@@ -198,7 +372,7 @@
             <p style="color: var(--text-secondary); font-size: var(--size-lead); margin-block-end: var(--space-5); line-height: 1.7;">With over 15 years in the industry, SignSure has built a reputation for reliability that title companies depend on for their most critical deadlines.</p>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-block-end: var(--space-6);">
               <div style="padding: var(--space-4); background: var(--surface-card); border-radius: var(--radius); text-align: center; border: 1px solid var(--border-light);">
-                <div style="font-family: var(--font-heading); font-weight: var(--weight-h2); font-size: var(--size-h3); color: var(--color-secondary-dark);">99.7%</div>
+                <div style="font-family: var(--font-heading); font-weight: var(--weight-h2); font-size: var(--size-h3); color: var(--color-secondary-dark);">99.8%</div>
                 <div style="font-size: var(--size-caption); color: var(--text-muted);">Completion Rate</div>
               </div>
               <div style="padding: var(--space-4); background: var(--surface-card); border-radius: var(--radius); text-align: center; border: 1px solid var(--border-light);">
@@ -206,10 +380,13 @@
                 <div style="font-size: var(--size-caption); color: var(--text-muted);">Client Rating</div>
               </div>
             </div>
-            <a href="about.html" class="btn btn--primary">Learn About Us</a>
+            <div style="display: flex; gap: var(--space-4); margin-block-start: var(--space-4);">
+              <a href="about.html" class="btn btn--primary">Learn About Us</a>
+              <a href="services.html" class="btn btn--secondary">Our Full Services</a>
+            </div>
           </div>
-          <div style="border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 3/4;">
-            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80" alt="Team collaboration" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+          <div style="border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/3; box-shadow: var(--shadow-md);">
+            <img src="assets/images/about_handshake.jpg" alt="Successful closing handshake" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
           </div>
         </div>
       </div>
@@ -321,6 +498,11 @@
     </div>
   </footer>
 
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+
   <script src="assets/js/main.js"></script>
   <script>
     // Interactive counter animation for Home 2
@@ -355,6 +537,37 @@
     const counterSection = document.getElementById('counter-closings');
     if (counterSection) {
       counterObserver.observe(counterSection.closest('div').parentElement);
+    }
+
+    // Instant Signing Estimator Logic
+    function updateEstimate() {
+      const serviceSelect = document.getElementById('calc-service');
+      const locationSelect = document.getElementById('calc-location');
+      const sameDayCheckbox = document.getElementById('calc-same-day');
+      const totalDisplay = document.getElementById('calc-total-display');
+      const etaDisplay = document.getElementById('calc-eta');
+      const ctaBtn = document.getElementById('calc-cta-btn');
+
+      if (!serviceSelect || !totalDisplay) return;
+
+      const basePrice = parseInt(serviceSelect.value) || 150;
+      const locationAdd = parseInt(locationSelect ? locationSelect.value : 0) || 0;
+      const sameDayAdd = (sameDayCheckbox && sameDayCheckbox.checked) ? 30 : 0;
+      const total = basePrice + locationAdd + sameDayAdd;
+
+      totalDisplay.textContent = '$' + total;
+      if (etaDisplay) {
+        if (sameDayCheckbox && sameDayCheckbox.checked) {
+          etaDisplay.textContent = '< 15 Mins (Priority Dispatch)';
+        } else {
+          etaDisplay.textContent = '< 30 Minutes (Standard)';
+        }
+      }
+      if (ctaBtn) {
+        const selectedOpt = serviceSelect.options[serviceSelect.selectedIndex];
+        const serviceName = selectedOpt ? selectedOpt.getAttribute('data-name') : 'Signing';
+        ctaBtn.innerHTML = '<i class="ri-check-line"></i> Book ' + serviceName + ' ($' + total + ')';
+      }
     }
   </script>
 </body>
