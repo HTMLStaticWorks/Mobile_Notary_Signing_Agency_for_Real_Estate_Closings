@@ -5117,10 +5117,159 @@ img.loaded {
   }
 }
 
-/* ── FIX 9: Contact & Page Hero mobile ── */
+/* ═══════════════════════════════════════════════════════
+   FIX 1: Contact Page Mobile Social Media Centering
+   ═══════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
-  .contact-social { justify-content: center !important; }
-  .page-hero h1 { font-size: 1.5rem !important; }
-  .page-hero .lead { font-size: 1rem !important; }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    text-align: center;
+    align-items: center;
+  }
+
+  .contact-info > div:first-child {
+    text-align: center;
+  }
+
+  .contact-info__item {
+    justify-content: flex-start;
+    text-align: start;
+    width: 100%;
+    max-width: 380px;
+    margin-inline: auto;
+  }
+
+  .contact-social,
+  .contact-info .contact-social {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    align-self: center !important;
+    width: 100% !important;
+    margin-inline: auto !important;
+    margin-block-start: var(--space-4) !important;
+    text-align: center !important;
+  }
+
+  .contact-social .contact-social__link {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0;
+  }
 }
+
+@media (max-width: 480px) {
+  .contact-social,
+  .contact-info .contact-social {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    align-self: center !important;
+    width: 100% !important;
+    margin-inline: auto !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
+   FIX 2: Reduced Hero Section Text Font Size on Mobile
+   (Applied to all pages EXCEPT Home 1 and Home 2)
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Page Hero on About, Services, Coverage, How It Works, Blog, Contact */
+  .page-hero {
+    padding-block: var(--space-8) var(--space-7) !important;
+    padding-block-start: calc(var(--navbar-height) + var(--space-6)) !important;
+  }
+
+  .page-hero h1,
+  .page-hero .hero__title,
+  .page-hero [style*="font-size: var(--size-h1)"],
+  .page-hero [style*="font-size:var(--size-h1)"] {
+    font-size: 1.625rem !important; /* Reduced from ~46px to ~26px */
+    line-height: 1.25 !important;
+    letter-spacing: -0.01em !important;
+    margin-block-end: var(--space-3) !important;
+  }
+
+  .page-hero .lead,
+  .page-hero p:not(.hero__tag) {
+    font-size: 0.95rem !important; /* Reduced from 18px to ~15px */
+    line-height: 1.55 !important;
+    max-width: 92% !important;
+    margin-inline: auto !important;
+  }
+
+  .page-hero .hero__tag,
+  .page-hero .section-tag {
+    font-size: 0.75rem !important;
+    padding: var(--space-1) var(--space-3) !important;
+    margin-block-end: var(--space-3) !important;
+  }
+
+  /* Hero stats in about page on mobile */
+  .page-hero [style*="display: flex"][style*="justify-content: center"] > div {
+    padding: var(--space-2) var(--space-3) !important;
+  }
+
+  .page-hero [style*="font-size: 1.1rem"] {
+    font-size: 0.95rem !important;
+  }
+
+  .page-hero [style*="font-size: 0.75rem"] {
+    font-size: 0.7rem !important;
+  }
+
+  /* Blog Single Article Header */
+  .blog-single__header {
+    margin-block-end: var(--space-6) !important;
+  }
+
+  .blog-single__header h1,
+  .blog-single__title {
+    font-size: 1.55rem !important;
+    line-height: 1.25 !important;
+    margin-block-end: var(--space-3) !important;
+  }
+
+  .blog-single__meta {
+    font-size: 0.825rem !important;
+    gap: var(--space-2) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero {
+    padding-block: var(--space-6) var(--space-5) !important;
+    padding-block-start: calc(var(--navbar-height) + var(--space-4)) !important;
+  }
+
+  .page-hero h1,
+  .page-hero .hero__title,
+  .page-hero [style*="font-size: var(--size-h1)"],
+  .page-hero [style*="font-size:var(--size-h1)"] {
+    font-size: 1.375rem !important; /* ~22px on smaller screens */
+    line-height: 1.25 !important;
+  }
+
+  .page-hero .lead,
+  .page-hero p:not(.hero__tag) {
+    font-size: 0.875rem !important; /* 14px on smaller screens */
+    line-height: 1.5 !important;
+  }
+
+  .page-hero .hero__tag {
+    font-size: 0.7rem !important;
+    padding: 3px 8px !important;
+  }
+
+  .blog-single__header h1,
+  .blog-single__title {
+    font-size: 1.35rem !important;
+  }
+}
+
 
