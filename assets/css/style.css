@@ -1515,6 +1515,66 @@ section {
   font-size: 1.1rem;
 }
 
+/* Compliance Checklist (about.html) - Uniform Alignment */
+.about__list--compliance {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: var(--space-4) !important;
+  margin-block: var(--space-5) !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.about__list--compliance .compliance-item {
+  display: grid !important;
+  grid-template-columns: 24px 230px 1fr !important;
+  align-items: baseline !important;
+  gap: var(--space-3) !important;
+  font-size: var(--size-label) !important;
+  line-height: 1.55 !important;
+}
+
+.about__list--compliance .compliance-item__icon {
+  color: var(--color-accent) !important;
+  font-size: 1.15rem !important;
+  align-self: flex-start !important;
+  margin-block-start: 2px !important;
+  flex-shrink: 0 !important;
+}
+
+.about__list--compliance .compliance-item__title {
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  line-height: 1.45 !important;
+}
+
+.about__list--compliance .compliance-item__desc {
+  color: var(--text-secondary) !important;
+  line-height: 1.55 !important;
+}
+
+@media (max-width: 991px) {
+  .about__list--compliance .compliance-item {
+    grid-template-columns: 22px 1fr !important;
+    gap: 4px var(--space-3) !important;
+  }
+
+  .about__list--compliance .compliance-item__icon {
+    grid-row: 1 / span 2 !important;
+    align-self: flex-start !important;
+    margin-block-start: 2px !important;
+  }
+
+  .about__list--compliance .compliance-item__title {
+    grid-column: 2 !important;
+  }
+
+  .about__list--compliance .compliance-item__desc {
+    grid-column: 2 !important;
+    font-size: 0.875rem !important;
+  }
+}
+
 /* ═══════════════════════════════════════════════════════
    FEATURES / HIGHLIGHTS
    ═══════════════════════════════════════════════════════ */
